@@ -27,7 +27,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <div
       className={cn(
-        "w-full h-svh z-45 fixed inset-0 left-0 bg-brand-black transition-all duration-700 ease-in-out md:hidden flex flex-col items-center justify-start border-r border-brand-primary/20",
+        "w-full h-svh z-45 fixed inset-0 left-0 bg-brand-black transition-all duration-700 ease-in-out md:hidden flex flex-col items-center justify-start border-r border-brand-primary/10",
         isOpen ? "translate-x-0" : "-translate-x-full",
       )}
     >
@@ -43,7 +43,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             onClick={onClose}
             className="flex w-fit h-fit text-brand-primary"
           >
-            <IconX className="h-auto w-8 stroke-[1.5] shrink-0" />
+            <IconX className="h-auto w-6 stroke-[1.5] shrink-0" />
           </Button>
         </div>
 

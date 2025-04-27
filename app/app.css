@@ -4,8 +4,9 @@
 
 @theme inline {
     /* Colors */
-    --color-brand-white: #ffffff;
-    --color-brand-black: #0e0c00;
+    --color-brand-white: #f5f5f5;
+    --color-brand-black: #090909;
+    /* --color-brand-black: #0e0c00; Initial and Original brand black */
     --color-brand-grey-1: #686764;
     --color-brand-grey-2: #a19e99;
     --color-brand-primary: #ffd801;
@@ -107,4 +108,11 @@ ol {
 
 .animate-marquee {
     white-space: nowrap;
+}
+
+.title {
+    @apply uppercase text-xs font-bold leading-4 tracking-[1.5px];
+}
+.heading {
+    @apply md:text-6xl text-4xl font-crimson font-normal;
 }

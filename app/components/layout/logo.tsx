@@ -7,11 +7,11 @@ interface BrandLogoProps {
 export default function BrandLogo({ className }: BrandLogoProps) {
   return (
     <img
-      loading="eager"
+      loading="lazy"
       src="/images/logo.png"
       alt="eduwa osa logo"
       className={cn(
-        "object-center object-contain h-auto md:w-20 w-16",
+        "object-center object-contain h-auto md:w-16 w-12",
         className,
       )}
     />

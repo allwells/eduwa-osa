@@ -1,13 +1,13 @@
 import cn from "~/utils/cn";
 import { useState } from "react";
 import BrandLogo from "./logo";
+import MobileMenu from "./mobile-menu";
 import type { LinkType } from "~/types";
 import { useScrollPosition } from "~/hooks";
 import { Button } from "~/components/form";
 import { Link, useLocation } from "react-router";
 import { IconMenu3 } from "@tabler/icons-react";
 import { isPageActive } from "~/utils/helpers";
-import MobileMenu from "./mobile-menu";
 
 export const NAVIGATIONS: LinkType[] = [
   {
@@ -32,6 +32,8 @@ export const NAVIGATIONS: LinkType[] = [
   },
 ];
 
+const TARGET = 30;
+
 export default function Navbar() {
   const { pathname } = useLocation();
   const { scrollY } = useScrollPosition();
@@ -41,9 +43,9 @@ export default function Navbar() {
     <>
       <nav
         className={cn(
-          "w-full md:px-[5%] px-6 py-2 md:h-24 h-20 z-40 sticky top-0 flex justify-center items-center",
+          "w-full md:px-[5%] px-6 py-2 md:h-20 h-16 z-40 sticky top-0 flex justify-center items-center isolate",
           {
-            "bg-brand-black/50 backdrop-blur-xs": scrollY >= 30,
+            "bg-brand-black/85 backdrop-blur-sm": scrollY >= TARGET,
           },
         )}
       >
@@ -73,9 +75,7 @@ export default function Navbar() {
               );
             })}
 
-            <Button variant="primary" to="/register" className="px-8">
-              Join
-            </Button>
+            <Button variant="primary">Get Started</Button>
           </div>
 
           <Button
