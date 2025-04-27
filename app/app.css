@@ -1,15 +1,111 @@
+@import url("./assets/fonts/Satoshi/Fonts/WEB/css/satoshi.css");
+@import url("./assets/fonts/CrimsonPro/Fonts/WEB/css/crimson-pro.css");
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@theme inline {
+    /* Colors */
+    --color-brand-white: #ffffff;
+    --color-brand-black: #0e0c00;
+    --color-brand-grey-1: #0e0c00;
+    --color-brand-grey-2: #a19e99;
+    --color-brand-yellow: #ffd801;
+    --color-brand-yellow-muted: #ffd52e;
+    --color-brand-yellow-muted-2: #ffe26d;
+    --color-brand-red: #b80c0a;
+    --color-brand-red-muted: #a63d41;
+    --color-brand-red-muted-2: #da6d70;
+
+    /* Fonts */
+    --font-satoshi: "Satoshi-Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-satoshi-italic: "Satoshi-VariableItalic", ui-sans-serif, system-ui,
+        sans-serif;
+    --font-crimson: "CrimsonPro-Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-crimson-italic: "CrimsonPro-VariableItalic", ui-sans-serif,
+        system-ui, sans-serif;
+
+    /* Responsive */
+    --breakpoint-xs: 475px;
+    --container-8xl: var(--container-8xl);
+    --container-9xl: var(--container-9xl);
+}
+
+/* For debugging */
+.ii {
+    border: 1px solid red !important;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 12px;
+    border-radius: 99px;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 99px;
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: var(--color-brand-grey-1);
+}
+/* Hide scrollbar */
+.scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-white);
+    font-family: var(--font-satoshi);
+    font-weight: 400;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+button {
+    outline: 0;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    &:disabled {
+        cursor: default;
+    }
+}
+a {
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+input,
+textarea,
+textarea:focus,
+input:focus {
+    outline: 0;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+ul {
+    list-style: disc;
+    padding-left: 18px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 22px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    white-space: nowrap;
 }
