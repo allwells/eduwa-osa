@@ -1,5 +1,5 @@
-import { Animate } from "~/components/common";
 import { Button } from "~/components/form";
+import { Animate } from "~/components/common";
 
 export default function Home() {
   return (

@@ -85,7 +85,7 @@ export default function Button({
     "flex justify-center items-center gap-2.5",
     "border border-transparent",
     "text-sm font-semibold uppercase",
-    "transition-all duration-200",
+    "transition-all duration-150",
     "hover:scale-105 active:scale-90",
     "disabled:hover:scale-none disabled:active:scale-none",
     variants[variant],
