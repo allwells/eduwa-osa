@@ -10,6 +10,62 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Analytics } from "@vercel/analytics/react";
+import seo from "./utils/seo";
+
+// Meta tags
+export function meta() {
+  return [
+    { title: seo.title },
+    { name: "description", content: seo.description },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: seo.name },
+    { name: "keywords", content: seo.keywords },
+
+    // Open Graph
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: seo.url },
+    { property: "og:title", content: seo.title },
+    { property: "og:description", content: seo.description },
+    { property: "og:site_name", content: seo.name },
+    { property: "og:image", content: seo.image },
+
+    // Twitter
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:url", content: seo.url },
+    { name: "twitter:title", content: seo.title },
+    { name: "twitter:description", content: seo.description },
+    { name: "twitter:image", content: seo.image },
+
+    // Canonical
+    { rel: "canonical", href: seo.url },
+  ];
+}
+
+// Favicon and preload
+export function links() {
+  return [
+    { rel: "icon", href: "/favicon.ico" },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: "/apple-touch-icon.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      href: "/favicon-32x32.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      href: "/favicon-16x16.png",
+    },
+    { rel: "manifest", href: "/site.webmanifest" },
+  ];
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
