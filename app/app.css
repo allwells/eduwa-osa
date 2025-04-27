@@ -6,14 +6,14 @@
     /* Colors */
     --color-brand-white: #ffffff;
     --color-brand-black: #0e0c00;
-    --color-brand-grey-1: #0e0c00;
+    --color-brand-grey-1: #686764;
     --color-brand-grey-2: #a19e99;
-    --color-brand-yellow: #ffd801;
-    --color-brand-yellow-muted: #ffd52e;
-    --color-brand-yellow-muted-2: #ffe26d;
-    --color-brand-red: #b80c0a;
-    --color-brand-red-muted: #a63d41;
-    --color-brand-red-muted-2: #da6d70;
+    --color-brand-primary: #ffd801;
+    --color-brand-primary-muted: #ffd52e;
+    --color-brand-primary-disabled: #ffe26d;
+    --color-brand-secondary: #b80c0a;
+    --color-brand-secondary-muted: #a63d41;
+    --color-brand-secondary-disabled: #da6d70;
 
     /* Fonts */
     --font-satoshi: "Satoshi-Variable", ui-sans-serif, system-ui, sans-serif;
@@ -25,8 +25,8 @@
 
     /* Responsive */
     --breakpoint-xs: 475px;
-    --container-8xl: var(--container-8xl);
-    --container-9xl: var(--container-9xl);
+    --container-8xl: 1440px;
+    --container-9xl: 1573px;
 }
 
 /* For debugging */
@@ -59,8 +59,8 @@
 
 html,
 body {
-    color: var(--color-brand-black);
-    background-color: var(--color-brand-white);
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-black);
     font-family: var(--font-satoshi);
     font-weight: 400;
 }
@@ -69,7 +69,6 @@ button {
     outline: 0;
     outline: none;
     cursor: pointer;
-    letter-spacing: 1.5px;
     &:disabled {
         cursor: default;
     }

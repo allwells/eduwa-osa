@@ -1,3 +1,6 @@
+import "./app.css";
+import "aos/dist/aos.css";
+
 import {
   isRouteErrorResponse,
   Links,
@@ -6,11 +9,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import seo from "~/utils/seo";
+import { AOSProvider } from "~/contexts/aos";
 import type { Route } from "./+types/root";
-import "./app.css";
 import { Analytics } from "@vercel/analytics/react";
-import seo from "./utils/seo";
 
 // Meta tags
 export function meta() {
@@ -77,7 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <AOSProvider>{children}</AOSProvider>
         <Analytics />
         <ScrollRestoration />
         <Scripts />

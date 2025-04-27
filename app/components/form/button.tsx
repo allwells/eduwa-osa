@@ -3,7 +3,16 @@ import { Link } from "react-router";
 import { IconLoader2 } from "@tabler/icons-react";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "primary" | "outline" | "secondary" | "unstyled";
+type ButtonVariant =
+  | "default"
+  | "outline"
+  | "inverted"
+  | "inverted-outline"
+  | "primary"
+  | "primary-outline"
+  | "secondary"
+  | "secondary-outline"
+  | "unstyled";
 
 type BaseProps = {
   to?: string;
@@ -16,12 +25,13 @@ type BaseProps = {
   ) => void;
 };
 
-type ButtonAsLinkProps = BaseProps & AnchorHTMLAttributes<HTMLAnchorElement>;
+type ButtonAsLinkProps = BaseProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">;
 type ButtonAsButtonProps = BaseProps & ButtonHTMLAttributes<HTMLButtonElement>;
 
 type ButtonProps = ButtonAsLinkProps | ButtonAsButtonProps;
 
-export function Button({
+export default function Button({
   to,
   children,
   className,
@@ -31,17 +41,53 @@ export function Button({
   ...rest
 }: ButtonProps) {
   const variants: Record<ButtonVariant, string> = {
-    primary:
-      "bg-brand- text-brand- border-brand- disabled:bg-brand-/40 disabled:text-brand-/80 disabled:border-transparent",
-    outline:
-      "bg-brand-/5 border-brand- text-brand- disabled:bg-transparent disabled:border-brand-/40 disabled:text-brand-/40",
-    secondary:
-      "bg-brand- text-brand- border-brand- disabled:bg-brand-/40 disabled:text-brand-/40 disabled:border-transparent",
+    default: cn(
+      "bg-brand-black text-brand-white border-brand-black",
+      "disabled:bg-brand-grey-2 disabled:text-brand-white/80 disabled:border-transparent",
+    ),
+    outline: cn(
+      "bg-transparent text-brand-black border-brand-black",
+      "hover:bg-brand-black hover:text-brand-white",
+      "disabled:bg-transparent disabled:text-brand-grey-2 disabled:border-brand-grey-2",
+    ),
+    inverted: cn(
+      "bg-brand-white text-brand-black border-brand-white",
+      "disabled:bg-brand-white/50 disabled:text-brand-grey-1 disabled:border-transparent",
+    ),
+    "inverted-outline": cn(
+      "bg-transparent text-brand-white border-brand-white",
+      "hover:bg-brand-white hover:text-brand-black",
+      "disabled:bg-transparent disabled:text-brand-grey-2 disabled:border-brand-grey-2",
+    ),
+    primary: cn(
+      "bg-brand-primary text-brand-black border-brand-primary",
+      "disabled:bg-brand-primary/50 disabled:text-brand-black/80 disabled:border-transparent",
+    ),
+    "primary-outline": cn(
+      "bg-transparent text-brand-primary border-brand-primary",
+      "hover:bg-brand-primary hover:text-brand-black",
+      "disabled:bg-transparent disabled:text-brand-primary/50 disabled:border-brand-primary/50",
+    ),
+    secondary: cn(
+      "bg-brand-secondary text-brand-white border-brand-secondary",
+      "disabled:bg-brand-secondary/50 disabled:text-brand-white/80 disabled:border-transparent",
+    ),
+    "secondary-outline": cn(
+      "bg-transparent text-brand-secondary border-brand-secondary",
+      "hover:bg-brand-secondary hover:text-brand-white",
+      "disabled:bg-transparent disabled:text-brand-secondary/50 disabled:border-brand-secondary/50",
+    ),
     unstyled: "p-0",
   };
 
   const classNames = cn(
-    "flex justify-center items-center uppercase border border-transparent px-4 py-2.5 text-sm font-normal rounded-xs gap-x-2 w-fit h-fit",
+    "w-fit h-fit px-4 py-3 rounded",
+    "flex justify-center items-center gap-2.5",
+    "border border-transparent",
+    "text-sm font-semibold uppercase",
+    "transition-all duration-200",
+    "hover:scale-105 active:scale-90",
+    "disabled:hover:scale-none disabled:active:scale-none",
     variants[variant],
     className,
   );
