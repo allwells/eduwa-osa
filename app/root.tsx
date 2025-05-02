@@ -1,13 +1,13 @@
-import "./app.css";
 import "aos/dist/aos.css";
+import "./app.css";
 
 import {
-  isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
 } from "react-router";
 import seo from "~/utils/seo";
 import { AOSProvider } from "~/contexts/aos";

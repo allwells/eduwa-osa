@@ -65,3 +65,10 @@ export type AOSAnchorPlacement =
   | "bottom-bottom"
   | "bottom-center"
   | "bottom-top";
+
+export type Service = {
+  id: string;
+  subtitle: string;
+  title: string;
+  description: string;
+};

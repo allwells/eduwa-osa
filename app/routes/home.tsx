@@ -1,13 +1,14 @@
 import { Button } from "~/components/form";
 import { Animate } from "~/components/common";
-import { Image, SvgSectionBreaker } from "~/components/ui";
+import { SERVICES } from "~/utils/constant";
+import { Image, ServiceCard, SvgSectionBreaker } from "~/components/ui";
 
 export default function Home() {
   return (
     <div className="w-full flex flex-col">
       {/* Hero section */}
       <div className="w-full flex flex-col lg:flex-row justify-center items-center md:px-[5%] px-6 max-w-9xl mx-auto md:min-h-[calc(100vh-96px)] min-h-[calc(100vh-80px)] overflow-hidden lg:gap-20 gap-14">
-        <div className="flex flex-col justify-start lg:items-start items-center w-full max-w-xl mt-12 md:mt-0 lg:text-left text-center gap-4">
+        <div className="flex flex-col justify-start lg:items-start items-center w-full max-w-xl lg:mt-0 mt-20 lg:text-left text-center gap-4">
           <Animate
             as="h1"
             className="font-crimson font-light lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1]"
@@ -144,8 +145,42 @@ export default function Home() {
       </div>
       <SvgSectionBreaker filename="wavy-white" className="-scale-y-100" />
 
-      <div className="w-full md:px-[5%] px-6 md:pb-24 py-12">
-        <div className="w-full"></div>
+      {/* Services section */}
+      <div className="w-full md:px-[5%] px-6 md:py-24 py-12">
+        <div className="w-full max-w-9xl flex flex-col xl:flex-row justify-between gap-12">
+          <div className="w-full max-w-lg flex">
+            <div className="xl:sticky xl:top-28 flex flex-col gap-2 h-fit grow">
+              <Animate as="h3" className="title text-brand-primary">
+                Explore Offerings
+              </Animate>
+              <Animate as="h2" delay={100} className="heading">
+                How We Can Work Together
+              </Animate>
+              <Animate
+                as="p"
+                delay={200}
+                className="mt-4 md:text-xl text-lg text-brand-grey-2"
+              >
+                Discover the key ways we can partner to unlock your potential,
+                gain strategic clarity, and engineer exponential growth for you.
+              </Animate>
+            </div>
+          </div>
+
+          <div className="w-full xl:max-w-3xl max-w-4xl flex xl:shrink-0">
+            <div className="grid sm:grid-cols-2 md:gap-x-8 md:gap-y-0 gap-6 w-full">
+              {SERVICES.map((service, index) => (
+                <Animate delay={index + 20}>
+                  <ServiceCard
+                    key={service.id}
+                    index={index}
+                    service={service}
+                  />
+                </Animate>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

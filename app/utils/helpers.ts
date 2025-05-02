@@ -1,3 +1,5 @@
+import slugify from "slugify";
+
 /**
  * Checks if a given page path is considered active based on the current pathname.
  *
@@ -25,3 +27,16 @@
 export const isPageActive = (pathname: string, path: string): boolean => {
   return path === "/" ? pathname === "/" : pathname.startsWith(path);
 };
+
+/**
+ * Slugifies the input string with specific options.
+ *
+ * @param {string} text - The input string to slugify
+ * @return {string} The slugified string
+ */
+export function slugifyThis(text: string): string {
+  return slugify(text, {
+    lower: true,
+    strict: true,
+  });
+}
