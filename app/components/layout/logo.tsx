@@ -9,7 +9,6 @@ export default function BrandLogo({ className }: BrandLogoProps) {
     <img
       loading="lazy"
       src="/images/logo.png"
-      alt="eduwa osa logo"
       className={cn(
         "object-center object-contain h-auto md:w-16 w-12",
         className,

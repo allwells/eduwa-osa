@@ -23,12 +23,12 @@ export const NAVIGATIONS: LinkType[] = [
     path: "/services",
   },
   {
-    name: "Resources",
-    path: "/resources",
+    name: "Catalyst Codex",
+    path: "/blog",
   },
   {
-    name: "Blog",
-    path: "/blog",
+    name: "Resources",
+    path: "/resources",
   },
 ];
 

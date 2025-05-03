@@ -114,5 +114,8 @@ ol {
     @apply uppercase text-xs font-bold leading-4 tracking-[1.5px];
 }
 .heading {
-    @apply md:text-6xl text-4xl font-crimson font-normal;
+    @apply md:text-6xl text-4xl font-crimson font-light;
+}
+.description {
+    @apply md:text-xl text-lg font-light;
 }

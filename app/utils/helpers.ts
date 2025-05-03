@@ -1,4 +1,8 @@
+import dayjs from "dayjs";
 import slugify from "slugify";
+import advancedFormat from "dayjs/plugin/advancedFormat";
+
+dayjs.extend(advancedFormat);
 
 /**
  * Checks if a given page path is considered active based on the current pathname.
@@ -11,18 +15,6 @@ import slugify from "slugify";
  * @param {string} pathname - The current full path of the page.
  * @param {string} path - The path to check against the current pathname.
  * @returns {boolean} Returns true if the `path` is considered active based on the `pathname`, false otherwise.
- *
- * @example
- * // Assuming current pathname is "/users/123"
- * isPageActive("/users/123", "/")       // returns false
- * isPageActive("/users/123", "/users")  // returns true
- * isPageActive("/users/123", "/users/123") // returns true
- * isPageActive("/users/123", "/settings") // returns false
- *
- * @example
- * // Assuming current pathname is "/"
- * isPageActive("/", "/")       // returns true
- * isPageActive("/", "/home")   // returns false
  */
 export const isPageActive = (pathname: string, path: string): boolean => {
   return path === "/" ? pathname === "/" : pathname.startsWith(path);
@@ -39,4 +31,21 @@ export function slugifyThis(text: string): string {
     lower: true,
     strict: true,
   });
+}
+
+/**
+ * Converts an ISO date string to a long-formatted date string.
+ *
+ * @param isoString - An ISO 8601 date string (e.g., "2025-04-15T13:45:30Z").
+ * @returns A formatted date string like "15th April, 2025 @ 1:45 PM".
+ * @throws Will throw an error if the input string is not a valid date.
+ */
+export function toLongDate(isoString: string): string {
+  const date = dayjs(isoString);
+
+  if (!date.isValid()) {
+    throw new Error("Invalid ISO date string.");
+  }
+
+  return date.format("Do MMMM, YYYY");
 }

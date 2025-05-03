@@ -72,3 +72,31 @@ export type Service = {
   title: string;
   description: string;
 };
+
+export type Transformation = {
+  subtitle: string;
+  title: string;
+  description: string;
+};
+
+export type BlogCategory = {
+  id: string;
+  slug: string;
+  title: string;
+};
+export type Blog = {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  cover: string;
+  publishedAt: string; // iso date format
+  category: BlogCategory;
+  content: any;
+};
+
+export type Testimonial = {
+  name: string;
+  content: string;
+  photo: string | null;
+};

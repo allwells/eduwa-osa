@@ -12,9 +12,9 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "h-fit w-full aspect-auto rounded px-6 pb-7 pt-10 border border-brand-grey-1/20 hover:border-brand-primary hover:bg-brand-primary relative isolate overflow-hidden transition-all duration-150 group/service",
+        "sm:h-fit h-full w-full aspect-auto rounded px-6 pb-7 pt-10 border border-brand-grey-1/20 hover:border-brand-primary hover:bg-brand-primary/85 relative isolate overflow-hidden transition-all duration-150 group/service",
         {
-          "md:mt-16": index % 2 !== 0,
+          "sm:mt-16": index % 2 !== 0,
         },
       )}
     >
