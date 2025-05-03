@@ -18,7 +18,7 @@ export default function BlogCard(blog: Blog) {
       />
 
       <div className="w-full h-[460px] aspect-[360/460] bg-brand-black/30 flex flex-col justify-end items-center xl:p-6 lg:p-4 sm:p-6 p-4">
-        <div className="w-full h-fit bg-brand-black xl:p-6 lg:p-4 sm:p-6 p-4 flex flex-col gap-2 rounded relative isolate overflow-hidden">
+        <div className="w-full h-fit bg-brand-black xl:p-6 lg:px-4 lg:pb-4 lg:pt-8 sm:p-6 px-4 pb-4 pt-8 flex flex-col gap-2 rounded relative isolate overflow-hidden">
           <LayoutBackground />
 
           <Badge>{blog.category.title}</Badge>
@@ -26,7 +26,7 @@ export default function BlogCard(blog: Blog) {
             {blog.title}
           </h2>
 
-          <div className="w-full h-0 my-3 border-b border-brand-grey-1/40" />
+          <div className="w-full h-0 my-2 border-b border-brand-grey-1/40" />
 
           <span className="text-sm text-brand-grey-2 uppercase">
             {toLongDate(blog.publishedAt)}

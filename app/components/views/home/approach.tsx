@@ -8,7 +8,12 @@ export default function Approach() {
       <SvgSectionBreaker filename="wavy-red" className="opacity-70" />
 
       <div className="w-full md:px-[5%] px-6 md:pb-24 pb-12 pt-12 flex justify-center bg-brand-secondary/70 text-brand-white relative overflow-hidden isolate">
-        <LogoBackground />
+        <LogoBackground
+          classNames={{
+            image:
+              "md:h-full md:w-auto h-auto w-full md:object-contain object-cover",
+          }}
+        />
 
         <div className="w-full max-w-9xl flex flex-col md:gap-[72px] gap-12 items-center">
           <div className="w-full max-w-2xl flex flex-col items-center text-center">

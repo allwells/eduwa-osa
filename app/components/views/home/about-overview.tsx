@@ -13,7 +13,7 @@ export default function AboutOverview() {
 
         <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:gap-24 md:gap-12 gap-4">
           <div className="flex flex-col gap-6 w-full max-w-xl relative isolate">
-            <LogoBackground className="md:flex hidden" />
+            <LogoBackground classNames={{ wrapper: "md:flex hidden" }} />
 
             <div className="flex flex-col gap-2">
               <Animate
