@@ -1,3 +1,5 @@
+import "swiper/css";
+import "swiper/css/navigation";
 import "aos/dist/aos.css";
 import "./app.css";
 

@@ -5,9 +5,9 @@ import { LogoBackground, SvgSectionBreaker } from "~/components/ui";
 export default function Approach() {
   return (
     <>
-      <SvgSectionBreaker filename="wavy-red" className="opacity-70" />
+      <SvgSectionBreaker filename="wavy-red" className="opacity-80" />
 
-      <div className="w-full md:px-[5%] px-6 md:pb-24 pb-12 pt-12 flex justify-center bg-brand-secondary/70 text-brand-white relative overflow-hidden isolate">
+      <div className="w-full md:px-[5%] px-6 md:pb-24 pb-12 pt-12 flex justify-center bg-brand-secondary/80 text-brand-white relative overflow-hidden isolate">
         <LogoBackground
           classNames={{
             image:
@@ -54,7 +54,7 @@ export default function Approach() {
 
       <SvgSectionBreaker
         filename="wavy-red"
-        className="-scale-100 opacity-70"
+        className="-scale-100 opacity-80"
       />
     </>
   );

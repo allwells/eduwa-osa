@@ -12,7 +12,7 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "sm:h-fit h-full w-full aspect-auto rounded px-6 pb-7 pt-10 border border-brand-grey-1/20 hover:border-brand-primary hover:bg-brand-primary/85 relative isolate overflow-hidden transition-all duration-150 group/service",
+        "sm:h-fit h-full w-full aspect-auto rounded px-6 pb-7 pt-10 border border-brand-primary/15 hover:border-transparent hover:bg-brand-primary/85 relative isolate overflow-hidden transition-all duration-150 group/service",
         {
           "sm:mt-16": index % 2 !== 0,
         },
@@ -32,7 +32,7 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
         <Button
           variant="inverted"
           to={`/services#${slugifyThis(service.title)}`}
-          className="py-2 px-4 mt-12 group-hover/service:text-brand-primary group-hover/service:bg-brand-black  group-hover/service:border-brand-black"
+          className="py-2.5 px-5 mt-12 group-hover/service:text-brand-primary group-hover/service:bg-brand-black group-hover/service:border-brand-black"
         >
           Learn More
         </Button>

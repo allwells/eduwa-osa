@@ -96,7 +96,9 @@ export type Blog = {
 };
 
 export type Testimonial = {
+  id: string;
   name: string;
+  location: string;
   content: string;
   photo: string | null;
 };

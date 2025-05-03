@@ -1,4 +1,4 @@
-import type { Blog, Service, Transformation } from "~/types";
+import type { Blog, Service, Testimonial, Transformation } from "~/types";
 
 export const SERVICES: Service[] = [
   {
@@ -151,5 +151,47 @@ export const BLOGS: Blog[] = [
       title: "Coaching",
     },
     content: {},
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: "1",
+    name: "Emily Rivera | Visionary",
+    location: "Lagos, Nigeria",
+    content:
+      "One Power Call with Eduwa gave me more clarity than three months of trying to figure things out alone.",
+    photo: null,
+  },
+  {
+    id: "2",
+    name: "Jason Lee | Business Owner",
+    location: "Nariobi, Kenya",
+    content:
+      "I came in confused. I left with a clear roadmap, renewed confidence, and a strategy that aligned with my purpose. This session is priceless.",
+    photo: null,
+  },
+  {
+    id: "3",
+    name: "Ngozi | Entrepreneur",
+    location: "Nigeria",
+    content:
+      "The VIP Intensive wasn’t just a session; it was my moment of breakthrough. I left with clarity, direction, and tangible steps that changed the trajectory of my business and life.",
+    photo: null,
+  },
+  {
+    id: "4",
+    name: "Chinedu | Creative Director",
+    location: "Nigeria",
+    content:
+      "I’ve experienced various coaching formats, yet nothing matched the depth and immediate impact of the VIP Intensive. It’s like having a personal reset button that catapulted me into action.",
+    photo: null,
+  },
+  {
+    id: "5",
+    name: "Natalie Chen | Corporate Accountant",
+    location: "Gambia",
+    content: "Quick turnaround, clear communication, and great results. A+.",
+    photo: null,
   },
 ];
