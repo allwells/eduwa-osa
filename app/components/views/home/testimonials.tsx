@@ -67,9 +67,14 @@ export default function Testimonials() {
                   breakpoints={breakpoints}
                   className="w-full! grid! md:px-[5%]! px-6!"
                 >
-                  {TESTIMONIALS.map((testimonial) => (
+                  {TESTIMONIALS.map((testimonial, index) => (
                     <SwiperSlide key={testimonial.id} className="h-full!">
-                      <Testimonial {...testimonial} />
+                      <Animate
+                        delay={index + 50}
+                        className="grid h-full w-full"
+                      >
+                        <Testimonial {...testimonial} />
+                      </Animate>
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -87,25 +92,28 @@ export default function Testimonials() {
 
             <div className="w-full flex justify-center">
               {mounted && swiper ? (
-                <div className="w-fit flex justify-center items-center gap-6">
+                <Animate
+                  animation="zoom-in"
+                  className="w-fit flex justify-center items-center gap-6"
+                >
                   <button
                     type="button"
                     onClick={() => swiper.slidePrev()}
                     disabled={position.isBeginning}
-                    className="w-fit h-fit p-3 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-grey-1"
+                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-grey-1"
                   >
-                    <IconArrowLeft className="h-6 w-6 shrink-0 stroke-2" />
+                    <IconArrowLeft className="lg:h-7 lg:w-7 md:h-6 md:w-6 h-5 w-5 shrink-0 stroke-[1.5]" />
                   </button>
 
                   <button
                     type="button"
                     onClick={() => swiper.slideNext()}
                     disabled={position.isEnd}
-                    className="w-fit h-fit p-3 rounded bg-brand-black text-brand-white disabled:text-brand-white disabled:bg-brand-grey-1"
+                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-grey-1"
                   >
-                    <IconArrowRight className="h-6 w-6 shrink-0 stroke-2" />
+                    <IconArrowRight className="lg:h-7 lg:w-7 md:h-6 md:w-6 h-5 w-5 shrink-0 stroke-[1.5]" />
                   </button>
-                </div>
+                </Animate>
               ) : (
                 <div className="w-fit flex justify-center items-center gap-5">
                   {[1, 2].map((value) => (
