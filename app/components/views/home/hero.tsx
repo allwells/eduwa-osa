@@ -33,6 +33,7 @@ export default function Hero() {
       </div>
 
       <Animate
+        offset={0}
         delay={350}
         className="overflow-hidden lg:min-w-[560px] sm:min-w-[460px] sm:min-h-[530px] aspect-[560/720] w-fit h-fit mt-auto"
       >

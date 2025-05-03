@@ -1,10 +1,18 @@
+import cn from "~/utils/cn";
 import Animate from "~/components/common/animate";
 
-export default function LogoBackground() {
+interface LogoBackgroundProps {
+  className?: string;
+}
+
+export default function LogoBackground({ className }: LogoBackgroundProps) {
   return (
     <Animate
       animation="zoom-in"
-      className="absolute -z-[1] h-full w-full flex justify-center items-center inset-0 m-auto"
+      className={cn(
+        "absolute -z-[1] h-full w-full flex justify-center items-center inset-0 m-auto",
+        className,
+      )}
     >
       {/* <div className="w-full h-full bg-[url('/images/logo.png')] bg-repeat bg-center bg-contain saturate-0 invert contrast-200 opacity-10" /> */}
 
