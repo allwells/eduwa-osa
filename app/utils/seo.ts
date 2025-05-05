@@ -2,7 +2,7 @@ const seo = {
   name: "Eduwa Osa",
   title: "Eduwa Osa | Catalyst, Coach & Thought Leader",
   description:
-    "Eduwa Osa helps individuals and institutions realign with their core, transform from the inside out, and create a life of authenticity, power, and possibility.",
+    "Eduwa helps individuals and institutions realign with their core, transform from the inside out, and create a life of authenticity, power, and possibility.",
   image: "/images/og-image.png",
   url: "https://www.eduwaosa.com",
   keywords: [
