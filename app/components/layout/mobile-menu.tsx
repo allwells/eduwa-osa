@@ -70,7 +70,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             );
           })}
 
-          <Button onClick={onClose} className="xs:text-xl text-xl px-6 py-4">
+          <Button
+            to="/services"
+            onClick={onClose}
+            className="xs:text-xl text-xl px-6 py-4"
+          >
             Work With Eduwa
           </Button>
         </div>

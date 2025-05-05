@@ -26,7 +26,11 @@ export default function Hero() {
         </Animate>
 
         <Animate delay={200}>
-          <Button variant="secondary" className="mt-6 px-6 text-base">
+          <Button
+            to="/services"
+            variant="secondary"
+            className="mt-6 px-6 text-base"
+          >
             Begin Your Journey
           </Button>
         </Animate>

@@ -31,7 +31,7 @@ export default function Cta() {
           </Animate>
 
           <Animate delay={250} className="w-fit h-fit">
-            <Button variant="secondary" className="mt-4">
+            <Button to="/services" variant="secondary" className="mt-4">
               Begin your journey
             </Button>
           </Animate>

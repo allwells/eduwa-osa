@@ -57,7 +57,11 @@ export default function AboutOverview() {
             </Animate>
 
             <Animate delay={250} className="md:mt-6 mt-4 md:flex hidden">
-              <Button variant="secondary" className="px-6 text-base">
+              <Button
+                to="/about"
+                variant="secondary"
+                className="px-6 text-base"
+              >
                 Learn more
               </Button>
             </Animate>
@@ -95,7 +99,7 @@ export default function AboutOverview() {
           </Animate>
 
           <Animate delay={250} className="mt-6 md:hidden">
-            <Button variant="secondary" className="px-6 text-base">
+            <Button to="/about" variant="secondary" className="px-6 text-base">
               Learn more
             </Button>
           </Animate>

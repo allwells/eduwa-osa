@@ -75,7 +75,9 @@ export default function Navbar() {
               );
             })}
 
-            <Button variant="primary">Get Started</Button>
+            <Button to="/services" variant="primary">
+              Get Started
+            </Button>
           </div>
 
           <Button
