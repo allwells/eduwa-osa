@@ -11,7 +11,7 @@ export default function AboutHero() {
         >
           <h3 className="title text-brand-primary">Meet Your Catalyst</h3>
           <h1 className="font-crimson font-light lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1]">
-            Catalyst for <br /> Deep Transformation
+            Catalyst for Deep <br /> Transformation
           </h1>
           <Button to="/services" className="py-3.5 px-5 mt-6">
             Work with Eduwa
