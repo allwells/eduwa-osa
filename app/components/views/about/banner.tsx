@@ -6,7 +6,7 @@ export default function Banner() {
       <div className="w-full h-full flex justify-center items-center bg-brand-black/75 inset-0 md:px-[5%] px-6 py-24">
         <Animate
           as="h1"
-          animation="flip-up"
+          animation="zoom-in"
           className="font-crimson font-extralight text-center lg:text-7xl md:text-6xl sm:text-5xl xs:text-[40px] text-4xl leading-[1] max-w-8xl"
         >
           Unlock your highest self and scale your outcomes.
