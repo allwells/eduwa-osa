@@ -52,7 +52,7 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-x-100 opacity-80 -mb-px"
+          className="-scale-x-100 opacity-80"
         />
       )}
 
@@ -160,7 +160,7 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-y-100 opacity-80 -mt-px"
+          className="-scale-y-100 opacity-80"
         />
       )}
     </>
