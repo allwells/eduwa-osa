@@ -1,5 +1,7 @@
+import "swiper/css/free-mode";
+
 import cn from "~/utils/cn";
-import { Controller } from "swiper/modules";
+import { Controller, FreeMode } from "swiper/modules";
 import Animate from "~/components/common/animate";
 import { TESTIMONIALS } from "~/utils/constant";
 import { useEffect, useState, type ReactNode } from "react";
@@ -83,12 +85,13 @@ export default function Testimonials({
                 <Swiper
                   speed={1200}
                   init={false}
+                  freeMode={true}
                   controller={{ control: swiper }}
                   onSwiper={(swiper) => setSwiper(swiper)}
                   onSlideChange={(s) =>
                     setPosition({ isBeginning: s.isBeginning, isEnd: s.isEnd })
                   }
-                  modules={[Controller]}
+                  modules={[Controller, FreeMode]}
                   breakpoints={breakpoints}
                   className="w-full! grid! md:px-[5%]! px-6!"
                 >
