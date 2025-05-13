@@ -79,9 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <AOSProvider config={{ disableForMobile: true }}>
-          {children}
-        </AOSProvider>
+        <AOSProvider>{children}</AOSProvider>
         <Analytics />
         <ScrollRestoration />
         <Scripts />
