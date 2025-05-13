@@ -4,7 +4,7 @@ import { Image, SvgSectionBreaker } from "~/components/ui";
 export default function MyMission() {
   return (
     <>
-      <div className="w-full md:px-[5%] px-6 md:py-24 py-[72px] bg-brand-white text-brand-black relative isolate">
+      <div className="w-full md:px-[5%] px-6 md:py-24 py-[72px] bg-brand-white text-brand-black relative isolate overflow-hidden">
         <div className="w-full flex flex-col lg:flex-row-reverse justify-center lg:items-center md:gap-12 gap-4">
           <Animate
             animation="fade-left"

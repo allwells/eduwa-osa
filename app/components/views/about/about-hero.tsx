@@ -4,7 +4,7 @@ import { Button } from "~/components/form";
 export default function AboutHero() {
   return (
     <div className="w-full md:px-[5%] px-6 md:py-24 py-[72px] flex justify-center items-center">
-      <div className="w-full max-w-9xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:gap-12 gap-8">
+      <div className="w-full max-w-9xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:gap-12 gap-8 overflow-hidden">
         <Animate
           animation="fade-right"
           className="w-full flex flex-col gap-2 max-w-xl"
