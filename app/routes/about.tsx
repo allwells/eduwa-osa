@@ -1,7 +1,9 @@
 import Cta from "~/components/views/cta";
 import Services from "~/components/views/home/services";
 import Testimonials from "~/components/views/home/testimonials";
-import { AboutHero, Banner, MyMission } from "~/components/views/about";
+import AboutHero from "~/components/views/about/about-hero";
+import Banner from "~/components/views/about/banner";
+import MyMission from "~/components/views/about/my-mission";
 
 export default function About() {
   return (

@@ -50,14 +50,14 @@ export default function Cta({ variant = "primary" }: CtaProps) {
 
           <Animate
             as="p"
-            delay={150}
+            staggerIndex={1}
             className="lg:text-2xl sm:text-xl text-lg text-brand-grey-1 leading-[1.2] w-full md:max-w-lg max-w-sm"
           >
             Break through limitations and accelerate your journey to exponential
             outcomes.
           </Animate>
 
-          <Animate delay={250} className="w-fit h-fit">
+          <Animate staggerIndex={2} className="w-fit h-fit">
             <Button to="/services" variant={variant} className="mt-4">
               Begin your journey
             </Button>
@@ -65,7 +65,10 @@ export default function Cta({ variant = "primary" }: CtaProps) {
         </div>
 
         <div className="md:aspect-[380/420] w-full h-full max-w-[320px] max-h-[420px]">
-          <Animate className="overflow-hidden w-full h-full max-w-[420px] md:absolute lg:right-0 md:-right-12 bottom-0">
+          <Animate
+            staggerIndex={1}
+            className="overflow-hidden w-full h-full max-w-[420px] md:absolute lg:right-0 md:-right-12 bottom-0"
+          >
             <Image
               width={380}
               height={420}

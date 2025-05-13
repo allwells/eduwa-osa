@@ -1,8 +1,9 @@
 import cn from "~/utils/cn";
 import type { ReactNode } from "react";
-import { Animate } from "~/components/common";
+import Animate from "~/components/common/animate";
 import { TRANSFORMATION } from "~/utils/constant";
-import { LogoBackground, SvgSectionBreaker } from "~/components/ui";
+import LogoBackground from "~/components/ui/logo-bg";
+import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
 interface ApproachProps {
   title?: ReactNode;
@@ -45,14 +46,14 @@ export default function Approach({
             <Animate as="h3" className="title">
               {title ? title : "My Unique Approach"}
             </Animate>
-            <Animate as="h2" delay={100} className="heading">
+            <Animate as="h2" staggerIndex={1} className="heading">
               {heading ? <>{heading}</> : "Transform at Every Level"}
             </Animate>
 
             {description && (
               <Animate
                 as="p"
-                delay={200}
+                staggerIndex={2}
                 className="mt-2 description text-brand-white/85 max-w-2xl"
               >
                 {description}
@@ -64,7 +65,7 @@ export default function Approach({
             {TRANSFORMATION.map((item, index) => (
               <Animate
                 key={item.title}
-                delay={index + 20}
+                staggerIndex={index}
                 className="flex flex-col gap-2 border border-brand-secondary/30 shadow-xl shadow-brand-black/15 bg-brand-white text-brand-black px-6 py-8 rounded lg:col-span-4 md:col-span-6 xl:nth-last-of-type-[2]:col-start-3 xl:last-of-type:col-start-7 lg:nth-last-of-type-[2]:col-start-2 lg:last-of-type:col-start-7 xl:nth-last-of-type-[2]:col-span-4 xl:last-of-type:col-span-4 lg:nth-last-of-type-[2]:col-span-5 lg:last-of-type:col-span-5 md:last-of-type:col-start-4"
               >
                 <div className="flex items-center justify-center gap-2 mr-auto border border-brand-secondary rounded-xs overflow-hidden pr-2">

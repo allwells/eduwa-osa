@@ -1,4 +1,3 @@
-import Image from "~/components/ui/image";
 import Animate from "~/components/common/animate";
 
 export default function Banner() {
@@ -10,8 +9,7 @@ export default function Banner() {
           animation="flip-up"
           className="font-crimson font-extralight text-center lg:text-7xl md:text-6xl sm:text-5xl xs:text-[40px] text-4xl leading-[1] max-w-8xl"
         >
-          Igniting exponential growth through integrated insight and unwavering
-          commitment.
+          Unlock your highest self and scale your outcomes.
         </Animate>
       </div>
     </div>

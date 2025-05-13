@@ -1,7 +1,8 @@
 import Cta from "~/components/views/cta";
 import Approach from "~/components/views/home/approach";
 import Testimonials from "~/components/views/home/testimonials";
-import { ServiceList, ServicesHero } from "~/components/views/services";
+import ServicesHero from "~/components/views/services/services-hero";
+import ServiceList from "~/components/views/services/service-list";
 
 export default function Services() {
   return (

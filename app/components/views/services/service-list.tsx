@@ -1,8 +1,8 @@
 import cn from "~/utils/cn";
 import Image from "~/components/ui/image";
+import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
 import { SERVICES } from "~/utils/constant";
-import { Button } from "~/components/form";
 import { slugifyThis } from "~/utils/helpers";
 
 export default function ServiceList() {
@@ -14,12 +14,12 @@ export default function ServiceList() {
             <Animate as="h3" className="title text-brand-primary">
               Offerings
             </Animate>
-            <Animate as="h2" delay={150} className="heading">
+            <Animate as="h2" staggerIndex={1} className="heading">
               Choose Your Journey
             </Animate>
             <Animate
               as="p"
-              delay={250}
+              staggerIndex={2}
               className="description max-w-[800px] text-brand-grey-2"
             >
               Below are my signature offers designed to meet you exactly where
@@ -63,6 +63,7 @@ export default function ServiceList() {
                   </Animate> */}
                   <Animate
                     as="h1"
+                    staggerIndex={index}
                     animation={isEven ? "fade-right" : "fade-left"}
                     className="md:text-5xl xs:text-4xl text-[26px] leading-[1] font-bold font-crimson"
                   >
@@ -70,12 +71,14 @@ export default function ServiceList() {
                   </Animate>
                   <Animate
                     as="p"
+                    staggerIndex={index}
                     animation={isEven ? "fade-right" : "fade-left"}
                     className="sm:text-xl text-lg"
                   >
                     {item.description}
                   </Animate>
                   <Animate
+                    staggerIndex={index}
                     animation={isEven ? "fade-right" : "fade-left"}
                     className="mt-4"
                   >
@@ -90,7 +93,7 @@ export default function ServiceList() {
                 </div>
 
                 <Animate
-                  delay={100}
+                  staggerIndex={index}
                   animation={isEven ? "fade-left" : "fade-right"}
                   className="w-full h-full max-w-[800px] lg:max-h-[580px] max-h-[500px] aspect-[800/580] overflow-hidden rounded-md"
                 >

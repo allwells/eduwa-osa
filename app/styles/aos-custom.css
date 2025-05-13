@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Performance optimizations for AOS animations */
+[data-aos] {
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    /* Prevents layout shifts */
+    transform: translate3d(0, 0, 0);
+}
+
+/* Optional: Force hardware acceleration on animated elements */
+[data-aos].aos-animate {
+    transform: translateZ(0);
+}
+
+/* Optimize paint performance */
+[data-aos^="fade"] {
+    will-change: opacity, transform;
+}
+
+[data-aos^="zoom"] {
+    will-change: opacity, transform;
+}
+
+[data-aos^="slide"] {
+    will-change: transform;
+}
+
+[data-aos^="flip"] {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Enhanced easing functions */
+@layer utilities {
+    .ease-smooth {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .ease-springy {
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .ease-gentle {
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    /* Custom animation variants that work with AOS */
+    /* Staggered animations helper */
+    .stagger-100 > *:nth-child(1) {
+        transition-delay: 0ms;
+    }
+    .stagger-100 > *:nth-child(2) {
+        transition-delay: 100ms;
+    }
+    .stagger-100 > *:nth-child(3) {
+        transition-delay: 200ms;
+    }
+    .stagger-100 > *:nth-child(4) {
+        transition-delay: 300ms;
+    }
+    .stagger-100 > *:nth-child(5) {
+        transition-delay: 400ms;
+    }
+
+    /* Optimized animation classes that work with Tailwind */
+    .aos-custom-fade-up {
+        @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    }
+
+    .aos-custom-fade-up.aos-animate {
+        @apply opacity-100 translate-y-0;
+    }
+
+    .aos-custom-fade-in {
+        @apply opacity-0 transition-opacity duration-700 ease-out;
+    }
+
+    .aos-custom-fade-in.aos-animate {
+        @apply opacity-100;
+    }
+
+    .aos-custom-slide-right {
+        @apply opacity-0 -translate-x-8 transition-all duration-700 ease-out;
+    }
+
+    .aos-custom-slide-right.aos-animate {
+        @apply opacity-100 translate-x-0;
+    }
+
+    .aos-custom-slide-left {
+        @apply opacity-0 translate-x-8 transition-all duration-700 ease-out;
+    }
+
+    .aos-custom-slide-left.aos-animate {
+        @apply opacity-100 translate-x-0;
+    }
+}
+
+/* Add reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        transition-duration: 0.001ms !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Add reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        transition-duration: 0.001ms !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}

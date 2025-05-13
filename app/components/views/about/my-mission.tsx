@@ -34,7 +34,7 @@ export default function MyMission() {
           </Animate>
 
           <Animate
-            delay={250}
+            staggerIndex={1}
             animation="fade-right"
             className="overflow-hidden md:max-w-[512px] aspect-square rounded-md flex justify-center md:items-center items-start"
           >
@@ -47,7 +47,7 @@ export default function MyMission() {
           </Animate>
 
           <Animate
-            delay={350}
+            staggerIndex={2}
             animation="fade-left"
             className="w-full md:hidden mt-4 space-y-4 text-lg"
           >

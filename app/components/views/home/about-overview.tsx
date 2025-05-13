@@ -1,6 +1,8 @@
-import { Button } from "~/components/form";
-import { Animate } from "~/components/common";
-import { Image, LogoBackground, SvgSectionBreaker } from "~/components/ui";
+import Button from "~/components/form/button";
+import Animate from "~/components/common/animate";
+import Image from "~/components/ui/image";
+import LogoBackground from "~/components/ui/logo-bg";
+import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
 export default function AboutOverview() {
   return (
@@ -15,20 +17,16 @@ export default function AboutOverview() {
             <LogoBackground classNames={{ wrapper: "md:flex hidden" }} />
 
             <div className="flex flex-col gap-2">
-              <Animate
-                as="h3"
-                delay={50}
-                className="title text-brand-secondary"
-              >
+              <Animate as="h3" className="title text-brand-secondary">
                 Discover Your Coach
               </Animate>
-              <Animate as="h2" delay={150} className="heading">
+              <Animate as="h2" staggerIndex={1} className="heading">
                 Meet Eduwa Osa
               </Animate>
             </div>
 
             <Animate
-              delay={200}
+              staggerIndex={2}
               className="w-full space-y-4 md:text-xl text-lg md:mt-4"
             >
               <p>
@@ -55,7 +53,7 @@ export default function AboutOverview() {
               </p>
             </Animate>
 
-            <Animate delay={250} className="md:mt-6 mt-4 md:flex hidden">
+            <Animate staggerIndex={3} className="md:mt-6 mt-4 md:flex hidden">
               <Button
                 to="/about"
                 variant="secondary"
@@ -67,7 +65,7 @@ export default function AboutOverview() {
           </div>
 
           <Animate
-            delay={250}
+            staggerIndex={4}
             className="overflow-hidden md:max-w-[520px] md:aspect-[520/650] aspect-[400/400] rounded-md flex justify-center md:items-center items-start"
           >
             <Image
@@ -79,7 +77,7 @@ export default function AboutOverview() {
           </Animate>
 
           <Animate
-            delay={350}
+            staggerIndex={5}
             className="w-full md:hidden mt-4 space-y-4 text-lg"
           >
             <p>
@@ -97,7 +95,7 @@ export default function AboutOverview() {
             </p>
           </Animate>
 
-          <Animate delay={250} className="mt-6 md:hidden">
+          <Animate staggerIndex={6} className="mt-6 md:hidden">
             <Button to="/about" variant="secondary" className="px-6 text-base">
               Learn more
             </Button>

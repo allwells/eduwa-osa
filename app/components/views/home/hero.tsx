@@ -1,6 +1,6 @@
-import { Image } from "~/components/ui";
-import { Button } from "~/components/form";
-import { Animate } from "~/components/common";
+import Image from "~/components/ui/image";
+import Button from "~/components/form/button";
+import Animate from "~/components/common/animate";
 
 export default function Hero() {
   return (
@@ -18,14 +18,14 @@ export default function Hero() {
 
         <Animate
           as="p"
-          delay={100}
+          staggerIndex={1}
           className="lg:text-2xl md:text-xl text-lg text-brand-grey-2"
         >
           Empowering high-growth individuals to unlock their highest potential
           through high-performance strategies.
         </Animate>
 
-        <Animate delay={200}>
+        <Animate staggerIndex={2}>
           <Button
             to="/services"
             variant="secondary"
@@ -38,7 +38,7 @@ export default function Hero() {
 
       <Animate
         offset={0}
-        delay={350}
+        staggerIndex={1}
         className="overflow-hidden lg:min-w-[560px] sm:min-w-[460px] min-h-[530px] aspect-[560/720] w-fit h-fit mt-auto"
       >
         <Image

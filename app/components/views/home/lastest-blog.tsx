@@ -17,12 +17,12 @@ export default function LastestBlog({ blogs }: LatestBlogProps) {
             <Animate as="h3" className="title text-brand-primary">
               Stay Inspired
             </Animate>
-            <Animate as="h2" delay={100} className="heading">
+            <Animate as="h2" staggerIndex={1} className="heading">
               Insights from <br className="md:block hidden" /> Catalyst Codex
             </Animate>
           </div>
 
-          <Animate delay={100} className="w-fit h-fit shrink-0">
+          <Animate staggerIndex={2} className="w-fit h-fit shrink-0">
             <Button to="/blog" className="md:flex hidden">
               Explore More
               <IconArrowRight className="w-6 h-6 md:stroke-[1.5] shrink-0" />
@@ -34,7 +34,7 @@ export default function LastestBlog({ blogs }: LatestBlogProps) {
           {blogs.map((blog, index) => (
             <Animate
               key={blog.id}
-              delay={index + 50}
+              staggerIndex={index}
               className="lg:last-of-type:flex md:last-of-type:hidden last-of-type:flex"
             >
               <BlogCard {...blog} />
@@ -42,10 +42,7 @@ export default function LastestBlog({ blogs }: LatestBlogProps) {
           ))}
         </div>
 
-        <Animate
-          delay={100}
-          className="w-full flex justify-center items-center"
-        >
+        <Animate className="w-full flex justify-center items-center">
           <Button to="/blog" className="md:hidden py-4 px-6">
             Explore More
             <IconArrowRight className="w-5 h-5 md:stroke-[1.5] shrink-0" />

@@ -15,6 +15,7 @@ export default function ServicesHero() {
 
           <Animate
             as="p"
+            staggerIndex={1}
             animation="fade-left"
             className="w-full flex flex-col max-w-2xl gap-4 description text-brand-grey-2 leading-[1.5]"
           >
@@ -25,10 +26,7 @@ export default function ServicesHero() {
         </div>
 
         <Animate
-          delay={200}
-          duration={1700}
-          animation="slide-up"
-          easing="ease-in-out"
+          staggerIndex={2}
           className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] rounded-lg flex justify-center items-center"
         >
           <Image

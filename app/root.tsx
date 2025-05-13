@@ -1,4 +1,5 @@
-import "./app.css";
+import "./styles/app.css";
+import "./styles/aos-custom.css";
 
 import {
   Links,
@@ -78,7 +79,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <AOSProvider>{children}</AOSProvider>
+        <AOSProvider config={{ disableForMobile: true }}>
+          {children}
+        </AOSProvider>
         <Analytics />
         <ScrollRestoration />
         <Scripts />

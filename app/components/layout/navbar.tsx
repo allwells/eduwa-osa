@@ -4,7 +4,7 @@ import BrandLogo from "./logo";
 import MobileMenu from "./mobile-menu";
 import type { LinkType } from "~/types";
 import { useScrollPosition } from "~/hooks";
-import { Button } from "~/components/form";
+import Button from "~/components/form/button";
 import { Link, useLocation } from "react-router";
 import { IconMenu3 } from "@tabler/icons-react";
 import { isPageActive } from "~/utils/helpers";

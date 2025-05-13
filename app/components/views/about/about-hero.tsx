@@ -11,7 +11,7 @@ export default function AboutHero() {
         >
           <h3 className="title text-brand-primary">Meet Your Catalyst</h3>
           <h1 className="font-crimson font-light lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1]">
-            Architect of <br /> Transformation
+            Catalyst for <br /> Deep Transformation
           </h1>
           <Button to="/services" className="py-3.5 px-5 mt-6">
             Work with Eduwa
@@ -19,6 +19,7 @@ export default function AboutHero() {
         </Animate>
 
         <Animate
+          staggerIndex={1}
           animation="fade-left"
           className="w-full flex flex-col max-w-3xl gap-4 lg:text-2xl md:text-xl text-lg leading-[1.5]"
         >

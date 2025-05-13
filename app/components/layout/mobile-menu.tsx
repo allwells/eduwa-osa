@@ -2,7 +2,7 @@ import cn from "~/utils/cn";
 import BrandLogo from "./logo";
 import { useEffect } from "react";
 import { NAVIGATIONS } from "./navbar";
-import { Button } from "~/components/form";
+import Button from "~/components/form/button";
 import { IconX } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router";
 import { isPageActive } from "~/utils/helpers";

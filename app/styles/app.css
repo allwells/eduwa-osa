@@ -1,5 +1,5 @@
-@import url("./assets/fonts/Satoshi/Fonts/WEB/css/satoshi.css");
-@import url("./assets/fonts/CrimsonPro/Fonts/WEB/css/crimson-pro.css");
+@import url("../assets/fonts/Satoshi/Fonts/WEB/css/satoshi.css");
+@import url("../assets/fonts/CrimsonPro/Fonts/WEB/css/crimson-pro.css");
 @import "tailwindcss";
 
 @theme inline {

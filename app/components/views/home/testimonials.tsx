@@ -1,6 +1,6 @@
 import cn from "~/utils/cn";
 import { Controller } from "swiper/modules";
-import { Animate } from "~/components/common";
+import Animate from "~/components/common/animate";
 import { TESTIMONIALS } from "~/utils/constant";
 import { useEffect, useState, type ReactNode } from "react";
 import type { Testimonial as TestimonialType } from "~/types";
@@ -66,7 +66,7 @@ export default function Testimonials({
             <Animate as="h3" className="title">
               {title ? title : "Real Results"}
             </Animate>
-            <Animate as="h2" delay={100} className="heading leading-[0.9]">
+            <Animate as="h2" staggerIndex={1} className="heading leading-[0.9]">
               {heading ? (
                 <>{heading}</>
               ) : (
@@ -95,7 +95,7 @@ export default function Testimonials({
                   {TESTIMONIALS.map((testimonial, index) => (
                     <SwiperSlide key={testimonial.id} className="h-full!">
                       <Animate
-                        delay={index + 50}
+                        staggerIndex={index}
                         className="grid h-full w-full"
                       >
                         <Testimonial

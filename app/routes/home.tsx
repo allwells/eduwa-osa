@@ -1,12 +1,10 @@
 import Cta from "~/components/views/cta";
-import {
-  Hero,
-  AboutOverview,
-  Services,
-  Approach,
-  LatestBlog,
-  Testimonials,
-} from "~/components/views/home";
+import Hero from "~/components/views/home/hero";
+import AboutOverview from "~/components/views/home/about-overview";
+import Approach from "~/components/views/home/approach";
+import Services from "~/components/views/home/services";
+import LatestBlog from "~/components/views/home/lastest-blog";
+import Testimonials from "~/components/views/home/testimonials";
 import { BLOGS } from "~/utils/constant";
 
 export default function Home() {

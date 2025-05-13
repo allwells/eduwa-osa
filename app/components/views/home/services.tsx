@@ -30,14 +30,14 @@ export default function Services({
             <Animate as="h3" className="title text-brand-primary">
               {title ? title : "Explore Offerings"}
             </Animate>
-            <Animate as="h2" delay={100} className="heading">
+            <Animate as="h2" staggerIndex={1} className="heading">
               {heading ? heading : "How We Can Work Together"}
             </Animate>
 
             {description && (
               <Animate
                 as="p"
-                delay={200}
+                staggerIndex={2}
                 className="mt-4 description text-brand-grey-2"
               >
                 {description}
@@ -51,7 +51,7 @@ export default function Services({
             {SERVICES.map((service, index) => (
               <Animate
                 key={service.id}
-                delay={index + 20}
+                staggerIndex={index}
                 className="sm:h-fit h-full grid"
               >
                 <ServiceCard index={index} service={service} />
