@@ -25,7 +25,7 @@ export const AOSProvider = ({ children, config }: AOSProviderProps) => {
       once: true,
       mirror: false,
       throttleDelay: 50,
-      anchorPlacement: "top-bottom",
+      anchorPlacement: "center-bottom",
       useClassNames: true,
       ...config,
     });
