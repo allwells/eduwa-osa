@@ -19,17 +19,17 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "Facebook",
     url: "https://www.facebook.com/eduwaosa.co",
-    icon: <IconBrandFacebook className="h-7 w-7 shrink-0 stroke-[1.6]" />,
+    icon: <IconBrandFacebook className="h-6 w-6 shrink-0 stroke-[1.3]" />,
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/eduwaosa.co",
-    icon: <IconBrandInstagram className="h-8 w-8 shrink-0 stroke-[1.6]" />,
+    icon: <IconBrandInstagram className="h-7 w-7 shrink-0 stroke-[1.3]" />,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/eduwaosa",
-    icon: <IconBrandLinkedin className="h-7 w-7 shrink-0 stroke-[1.6]" />,
+    icon: <IconBrandLinkedin className="h-6 w-6 shrink-0 stroke-[1.3]" />,
   },
 ];
 

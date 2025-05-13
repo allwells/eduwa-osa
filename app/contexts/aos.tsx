@@ -20,12 +20,12 @@ export const AOSProvider = ({ children, config }: AOSProviderProps) => {
     AOS.init({
       offset: 0,
       delay: 0,
-      duration: 1000,
+      duration: 1400,
       easing: "ease-in-out",
       once: true,
-      mirror: true,
+      mirror: false,
       throttleDelay: 50,
-      // anchorPlacement: "center-center",
+      anchorPlacement: "top-bottom",
       useClassNames: true,
       ...config,
     });

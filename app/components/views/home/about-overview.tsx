@@ -5,12 +5,11 @@ import { Image, LogoBackground, SvgSectionBreaker } from "~/components/ui";
 export default function AboutOverview() {
   return (
     <>
-      <div className="w-full md:px-[5%] px-6 md:pb-24 py-12 md:mt-20 bg-brand-white text-brand-black relative isolate">
-        <SvgSectionBreaker
-          filename="wavy-white"
-          className="absolute bottom-full"
-        />
-
+      <SvgSectionBreaker
+        filename="arc-white"
+        className="scale-y-100 -mb-1 -mt-24"
+      />
+      <div className="w-full md:px-[5%] px-6 md:pb-24 py-12 bg-brand-white text-brand-black relative isolate">
         <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:gap-24 md:gap-12 gap-4">
           <div className="flex flex-col gap-6 w-full max-w-xl relative isolate">
             <LogoBackground classNames={{ wrapper: "md:flex hidden" }} />
@@ -69,7 +68,7 @@ export default function AboutOverview() {
 
           <Animate
             delay={250}
-            className="overflow-hidden md:max-w-[520px] md:aspect-[520/650] aspect-[400/400] rounded-xl flex justify-center md:items-center items-start"
+            className="overflow-hidden md:max-w-[520px] md:aspect-[520/650] aspect-[400/400] rounded-md flex justify-center md:items-center items-start"
           >
             <Image
               width={520}
@@ -105,7 +104,7 @@ export default function AboutOverview() {
           </Animate>
         </div>
       </div>
-      <SvgSectionBreaker filename="wavy-white" className="-scale-y-100" />
+      <SvgSectionBreaker filename="arc-white" className="-scale-y-100 -mt-1" />
     </>
   );
 }

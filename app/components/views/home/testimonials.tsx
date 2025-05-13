@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import cn from "~/utils/cn";
+import { useEffect, useState, type ReactNode } from "react";
 import { Animate } from "~/components/common";
 import { TESTIMONIALS } from "~/utils/constant";
 import { SvgSectionBreaker } from "~/components/ui";
@@ -14,7 +15,21 @@ type SwiperSlideMovement = {
   isEnd: boolean;
 };
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  title?: ReactNode;
+  heading?: ReactNode;
+  withBg?: boolean;
+  bgFileName?: string;
+  className?: string;
+}
+
+export default function Testimonials({
+  title,
+  heading,
+  className,
+  withBg = true,
+  bgFileName = "arc-yellow",
+}: TestimonialsProps) {
   const [swiper, setSwiper] = useState<SwiperType>();
   const [mounted, setMounted] = useState<boolean>(false);
   const [position, setPosition] = useState<SwiperSlideMovement>({
@@ -34,21 +49,32 @@ export default function Testimonials() {
 
   return (
     <>
-      <SvgSectionBreaker
-        filename="wavy-yellow"
-        className="-scale-x-100 opacity-80"
-      />
+      {withBg && (
+        <SvgSectionBreaker
+          filename={bgFileName}
+          className="-scale-x-100 opacity-80 -mb-px"
+        />
+      )}
 
-      <div className="w-full md:pb-24 pb-12 pt-12 bg-brand-primary/80 text-brand-black flex justify-center relative isolate overflow-hidden">
-        <LayoutBackground />
-
+      <div
+        className={cn(
+          "w-full md:pb-24 py-12 bg-brand-primary/80 text-brand-black flex justify-center relative isolate overflow-hidden",
+          className,
+        )}
+      >
         <div className="w-full flex flex-col md:gap-[72px] gap-12 items-center">
           <div className="w-full max-w-9xl md:px-[5%] px-6 flex flex-col gap-4 items-center text-center">
             <Animate as="h3" className="title">
-              Real Results
+              {title ? title : "Real Results"}
             </Animate>
             <Animate as="h2" delay={100} className="heading leading-[0.9]">
-              Voices of <br /> Transformation
+              {heading ? (
+                <>{heading}</>
+              ) : (
+                <>
+                  Voices of <br /> Transformation
+                </>
+              )}
             </Animate>
           </div>
 
@@ -56,7 +82,7 @@ export default function Testimonials() {
             {mounted ? (
               <div className="w-full grid">
                 <Swiper
-                  speed={900}
+                  speed={1200}
                   init={false}
                   controller={{ control: swiper }}
                   onSwiper={(swiper) => setSwiper(swiper)}
@@ -73,7 +99,9 @@ export default function Testimonials() {
                         delay={index + 50}
                         className="grid h-full w-full"
                       >
-                        <Testimonial {...testimonial} />
+                        <Testimonial
+                          {...{ ...testimonial, filename: bgFileName }}
+                        />
                       </Animate>
                     </SwiperSlide>
                   ))}
@@ -129,15 +157,17 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <SvgSectionBreaker
-        filename="wavy-yellow"
-        className="-scale-y-100 opacity-80"
-      />
+      {withBg && (
+        <SvgSectionBreaker
+          filename={bgFileName}
+          className="-scale-y-100 opacity-80 -mt-px"
+        />
+      )}
     </>
   );
 }
 
-function Testimonial(props: TestimonialType) {
+function Testimonial(props: { filename?: string } & TestimonialType) {
   return (
     <div className="w-full h-full flex justify-center items-center relative rounded border border-brand-black/50 bg-brand-black text-brand-white md:p-6 p-4">
       <div className="w-full h-full flex flex-col items-start text-left justify-between gap-y-12">
@@ -147,7 +177,17 @@ function Testimonial(props: TestimonialType) {
           )}
 
           <div className="flex flex-col gap-1">
-            <h2 className="text-base font-medium leading-[1.2] tracking-tight uppercase text-brand-primary">
+            <h2
+              className={cn(
+                "text-base font-medium leading-[1.2] tracking-tight uppercase",
+                {
+                  "text-brand-primary":
+                    props.filename && props.filename.endsWith("yellow"),
+                  "text-brand-secondary-muted contrast-100 saturate-200":
+                    props.filename && props.filename.endsWith("red"),
+                },
+              )}
+            >
               {props.name}
             </h2>
             <h3 className="font-satoshi-italic text-sm uppercase text-brand-grey-2">

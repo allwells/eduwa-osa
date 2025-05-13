@@ -1,27 +1,48 @@
+import cn from "~/utils/cn";
+import type { ReactNode } from "react";
 import { SERVICES } from "~/utils/constant";
 import Animate from "~/components/common/animate";
 import ServiceCard from "~/components/views/services/service-card";
 
-export default function Services() {
+interface ServicesProps {
+  title?: ReactNode;
+  heading?: ReactNode;
+  description?: string;
+  className?: string;
+}
+
+export default function Services({
+  title,
+  heading,
+  description,
+  className,
+}: ServicesProps) {
   return (
-    <div className="w-full md:px-[5%] px-6 md:py-24 py-12 flex justify-center">
+    <div
+      className={cn(
+        "w-full md:px-[5%] px-6 md:py-24 py-12 flex justify-center",
+        className,
+      )}
+    >
       <div className="w-full max-w-9xl flex flex-col xl:flex-row justify-between gap-12">
         <div className="w-full max-w-lg flex">
           <div className="xl:sticky xl:top-28 flex flex-col gap-2 h-fit grow">
             <Animate as="h3" className="title text-brand-primary">
-              Explore Offerings
+              {title ? title : "Explore Offerings"}
             </Animate>
             <Animate as="h2" delay={100} className="heading">
-              How We Can Work Together
+              {heading ? heading : "How We Can Work Together"}
             </Animate>
-            <Animate
-              as="p"
-              delay={200}
-              className="mt-4 description text-brand-grey-2"
-            >
-              Discover the key ways we can partner to unlock your potential,
-              gain strategic clarity, and engineer exponential growth for you.
-            </Animate>
+
+            {description && (
+              <Animate
+                as="p"
+                delay={200}
+                className="mt-4 description text-brand-grey-2"
+              >
+                {description}
+              </Animate>
+            )}
           </div>
         </div>
 

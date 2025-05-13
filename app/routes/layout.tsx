@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import Cta from "~/components/views/cta";
 import { Navbar, Footer } from "~/components/layout";
 
 export default function Layout() {
@@ -10,7 +9,6 @@ export default function Layout() {
       <div className="w-full flex flex-col items-center justify-start grow">
         <Outlet />
       </div>
-      <Cta />
       <Footer />
     </div>
   );

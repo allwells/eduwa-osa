@@ -1,12 +1,39 @@
+import cn from "~/utils/cn";
 import Image from "~/components/ui/image";
 import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
 import { LayoutBackground } from "~/routes/layout";
 
-export default function Cta() {
+type CtaVariant = "primary" | "secondary";
+
+interface CtaProps {
+  variant?: CtaVariant;
+}
+
+const VARIANTS: Record<CtaVariant, string> = {
+  primary: "text-brand-primary",
+  secondary: "text-brand-secondary",
+};
+
+export default function Cta({ variant = "primary" }: CtaProps) {
   return (
-    <div className="w-full md:px-[5%] px-6 py-24 flex justify-center items-center">
-      <div className="md:w-full w-fit md:max-w-6xl bg-brand-white text-brand-black overflow-hidden flex md:flex-row flex-col justify-between items-center gap-16 md:px-12 px-8 pt-12 md:pb-12 pb-0 rounded relative min-h-[512px]">
+    <div
+      className={cn(
+        "w-full md:px-[5%] px-6 py-24 flex justify-center items-center",
+        {
+          "bg-brand-white border-b border-brand-grey-2": variant === "primary",
+        },
+      )}
+    >
+      <div
+        className={cn(
+          "md:w-full w-fit md:max-w-6xl overflow-hidden flex md:flex-row flex-col justify-between items-center gap-16 md:px-12 px-8 pt-12 md:pb-12 pb-0 rounded relative min-h-[512px]",
+          {
+            "bg-brand-black text-brand-white": variant === "primary",
+            "bg-brand-white text-brand-black": variant === "secondary",
+          },
+        )}
+      >
         <LayoutBackground />
 
         <div className="flex flex-col md:items-start items-center md:text-left text-center w-fit max-w-m md:shrink-0 md:gap-4 gap-3">
@@ -16,7 +43,7 @@ export default function Cta() {
           >
             Are you
             <br />
-            <span className="text-brand-secondary font-crimson font-medium">
+            <span className={cn("font-crimson font-medium", VARIANTS[variant])}>
               ready to evolve?
             </span>
           </Animate>
@@ -31,7 +58,7 @@ export default function Cta() {
           </Animate>
 
           <Animate delay={250} className="w-fit h-fit">
-            <Button to="/services" variant="secondary" className="mt-4">
+            <Button to="/services" variant={variant} className="mt-4">
               Begin your journey
             </Button>
           </Animate>

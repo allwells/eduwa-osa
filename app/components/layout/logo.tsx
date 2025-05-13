@@ -10,7 +10,7 @@ export default function BrandLogo({ className }: BrandLogoProps) {
       loading="lazy"
       src="/images/logo.png"
       className={cn(
-        "object-center object-contain h-auto md:w-16 w-12",
+        "object-center object-contain h-auto md:w-16 w-12 saturate-150",
         className,
       )}
     />
