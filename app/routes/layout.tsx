@@ -1,5 +1,9 @@
+import "swiper/css";
+import "swiper/css/navigation";
+
 import { Outlet } from "react-router";
-import { Navbar, Footer } from "~/components/layout";
+import Navbar from "~/components/layout/navbar";
+import Footer from "~/components/layout/footer";
 
 export default function Layout() {
   return (

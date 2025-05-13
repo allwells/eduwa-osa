@@ -1,5 +1,6 @@
 import Cta from "~/components/views/cta";
-import { Services, Testimonials } from "~/components/views/home";
+import Services from "~/components/views/home/services";
+import Testimonials from "~/components/views/home/testimonials";
 import { AboutHero, Banner, MyMission } from "~/components/views/about";
 
 export default function About() {

@@ -1,3 +1,5 @@
+import "aos/dist/aos.css";
+
 import type { AOSAnchorPlacement, AOSAnimation, AOSEasing } from "~/types";
 
 interface AnimateProps {

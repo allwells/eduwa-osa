@@ -1,5 +1,5 @@
-import { Animate } from "~/components/common";
-import { Button } from "~/components/form";
+import Button from "~/components/form/button";
+import Animate from "~/components/common/animate";
 
 export default function AboutHero() {
   return (
@@ -13,7 +13,9 @@ export default function AboutHero() {
           <h1 className="font-crimson font-light lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1]">
             Architect of <br /> Transformation
           </h1>
-          <Button className="py-3.5 px-5 mt-6">Work with Eduwa</Button>
+          <Button to="/services" className="py-3.5 px-5 mt-6">
+            Work with Eduwa
+          </Button>
         </Animate>
 
         <Animate

@@ -1,5 +1,6 @@
-import { Animate } from "~/components/common";
-import { Image, SvgSectionBreaker } from "~/components/ui";
+import Image from "~/components/ui/image";
+import Animate from "~/components/common/animate";
+import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
 export default function MyMission() {
   return (

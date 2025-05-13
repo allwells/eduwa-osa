@@ -2,39 +2,44 @@ import type { Blog, Service, Testimonial, Transformation } from "~/types";
 
 export const SERVICES: Service[] = [
   {
-    id: "DeepWork",
-    subtitle: "DeepWork",
-    title: "DeepWork (8-Week Group)",
+    id: "Deep Work",
+    subtitle: "8-Week Group",
+    title: "Deep Work",
     description:
       "An intensive group journey focused on inner mastery to transcend limitations and unlock exponential results in life and work.",
+    image: "/images/services/deep-work.jpg",
   },
   {
     id: "Launchpad",
-    subtitle: "Launchpad",
-    title: "Launchpad (Power Call)",
+    subtitle: "Power Call",
+    title: "Launchpad",
     description:
       "A high-impact, 2-4 hour deep-dive session for rapid clarity, strategic planning, and immediate action on your next move.",
+    image: "/images/services/launchpad.jpg",
   },
   {
     id: "One-on-One Coaching",
-    subtitle: "One-on-One Coaching",
-    title: "One-on-One Coaching (12-Week)",
+    subtitle: "12-Week",
+    title: "One-on-One Coaching",
     description:
       "A personalized, long-term journey for deep, lasting transformation into your most aligned, powerful, and empowered self.",
+    image: "/images/services/one-on-one.jpg",
   },
   {
     id: "VIP Intensive",
-    subtitle: "VIP Intensive",
+    subtitle: "VIP",
     title: "VIP Coaching Intensive",
     description:
       "A high-touch, private half or full-day experience designed to catalyze rapid breakthroughs, realignment, and strategic execution.",
+    image: "/images/services/vip.jpg",
   },
   {
     id: "Shift Lab",
-    subtitle: "Shift Lab",
-    title: "Shift Lab (Organizational)",
+    subtitle: "Organizational",
+    title: "Shift Lab",
     description:
       "A custom workshop and training experience to activate untapped potential, elevate team culture, and engineer sustainable growth for your organization.",
+    image: "/images/services/organizational.jpg",
   },
 ];
 

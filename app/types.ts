@@ -71,6 +71,7 @@ export type Service = {
   subtitle: string;
   title: string;
   description: string;
+  image: string;
 };
 
 export type Transformation = {

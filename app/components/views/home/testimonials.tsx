@@ -1,14 +1,13 @@
 import cn from "~/utils/cn";
-import { useEffect, useState, type ReactNode } from "react";
+import { Controller } from "swiper/modules";
 import { Animate } from "~/components/common";
 import { TESTIMONIALS } from "~/utils/constant";
-import { SvgSectionBreaker } from "~/components/ui";
-import { LayoutBackground } from "~/routes/layout";
-import { Controller } from "swiper/modules";
+import { useEffect, useState, type ReactNode } from "react";
 import type { Testimonial as TestimonialType } from "~/types";
 import type { Swiper as SwiperType } from "swiper/types";
 import { Swiper, SwiperSlide, type SwiperProps } from "swiper/react";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
 type SwiperSlideMovement = {
   isBeginning: boolean;
@@ -52,7 +51,7 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-x-100 opacity-80"
+          className="-scale-x-100 opacity-80 -mb-px"
         />
       )}
 
@@ -160,7 +159,7 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-y-100 opacity-80"
+          className="-scale-y-100 opacity-80 -mt-px"
         />
       )}
     </>
