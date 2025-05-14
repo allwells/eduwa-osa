@@ -55,11 +55,11 @@ export default function Footer() {
             >
               <Link
                 to={item.path}
-                className="w-fit h-fit md:text-sm text-xs font-medium hover:text-brand-secondary"
+                className="w-fit h-fit md:text-sm text-xs font-medium text-brand-grey-1 hover:text-brand-black"
               >
                 {item.name}
               </Link>
-              <span className="sm:group-last-of-type/link:hidden sm:flex hidden text-brand-secondary font-bold xs:text-xl text-base">
+              <span className="sm:group-last-of-type/link:hidden sm:flex hidden text-brand-grey-2 font-medium xs:text-xl text-base">
                 |
               </span>
             </div>
@@ -73,7 +73,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               to={social.url}
-              className="text-brand-secondary hover:scale-110 w-fit h-fit"
+              className="text-brand-black hover:scale-110 w-fit h-fit"
             >
               {social.icon}
             </Link>
