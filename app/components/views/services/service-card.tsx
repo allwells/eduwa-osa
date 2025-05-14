@@ -31,7 +31,7 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
 
         <Button
           variant="inverted"
-          to={`/services#${slugifyThis(service.title)}`}
+          to={`/services/${slugifyThis(service.title)}`}
           className="py-2.5 px-5 mt-12 group-hover/service:text-brand-primary group-hover/service:bg-brand-black group-hover/service:border-brand-black"
         >
           Learn More
