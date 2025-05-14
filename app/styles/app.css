@@ -154,7 +154,7 @@ ol {
     @apply mb-4;
 }
 .blog-content img {
-    @apply h-auto max-h-[480px] rounded-md w-full object-center object-cover relative my-6;
+    @apply h-auto max-h-[480px] w-full rounded-sm object-center object-contain relative my-6;
 }
 .blog-content ol {
     @apply list-decimal;
