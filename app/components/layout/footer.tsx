@@ -24,7 +24,9 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "Instagram",
     url: "https://www.instagram.com/eduwaosa.co",
-    icon: <IconBrandInstagram className="h-7 w-7 shrink-0 stroke-[1.3]" />,
+    icon: (
+      <IconBrandInstagram className="h-[26px] w-[26px] shrink-0 stroke-[1.3]" />
+    ),
   },
   {
     name: "LinkedIn",

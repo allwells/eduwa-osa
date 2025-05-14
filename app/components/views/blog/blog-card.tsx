@@ -18,10 +18,11 @@ export default function BlogCard(blog: Blog) {
       />
 
       <div className="w-full h-[460px] aspect-[360/460] bg-brand-black/30 flex flex-col justify-end items-center xl:p-6 lg:p-4 sm:p-6 p-4">
-        <div className="w-full h-fit bg-brand-black xl:p-6 lg:px-4 lg:pb-4 lg:pt-8 sm:p-6 px-4 pb-4 pt-8 flex flex-col gap-2 rounded relative isolate overflow-hidden">
+        <div className="w-full h-fit bg-brand-black xl:px-6 xl:pt-6 xl:pb-4 lg:px-4 lg:pb-4 lg:pt-8 sm:p-6 px-4 pb-4 pt-8 flex flex-col gap-2 rounded relative isolate overflow-hidden">
           <LayoutBackground />
 
           <Badge>{blog.category.title}</Badge>
+
           <h2 className="xl:text-2xl lg:text-xl sm:text-3xl text-2xl leading-[1.2] font-crimson font-medium mt-2 tracking-tight">
             {blog.title}
           </h2>

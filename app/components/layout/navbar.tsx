@@ -26,10 +26,10 @@ export const NAVIGATIONS: LinkType[] = [
     name: "Catalyst Codex",
     path: "/blog",
   },
-  {
-    name: "Resources",
-    path: "/resources",
-  },
+  // {
+  //   name: "Resources",
+  //   path: "/resources",
+  // },
 ];
 
 const TARGET = 30;
