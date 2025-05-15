@@ -24,17 +24,17 @@ export default function AboutHero() {
           className="w-full flex flex-col max-w-3xl gap-4 lg:text-2xl md:text-xl text-lg leading-[1.5]"
         >
           <p>
-            Eduwa Osa is the catalyst for profound, lasting
-            transformation—partnering with high achievers, visionary leaders,
-            and forward-thinking organizations to unlock their deepest
-            potential, master their internal and external dynamics, and scale
-            their outcomes exponentially.
+            Eduwa Osa is the catalyst for profound, lasting transformation,
+            partnering with high achievers, visionary leaders, and
+            forward-thinking organizations to unlock their deepest potential,
+            master their internal and external dynamics, and scale their
+            outcomes exponentially.
           </p>
           <p>
-            Her work goes beyond conventional growth strategies—it is a science
-            and art of deep transformation, integrating five core
-            disciplines—Philosophy, Psychology, Spirituality, Neuroscience, and
-            High-Performance Strategy—to help both individuals and organizations
+            Her work goes beyond conventional growth strategies, it is a science
+            and art of deep transformation, integrating five core disciplines:
+            Philosophy, Psychology, Spirituality, Neuroscience, and
+            High-Performance Strategy to help both individuals and organizations
             break internal barriers, realign with their original design, and
             drive sustainable, exponential impact.
           </p>

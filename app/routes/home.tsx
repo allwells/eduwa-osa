@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <AboutOverview />
       <Services description="Discover the key ways we can partner to unlock your potential, gain strategic clarity, and engineer exponential growth for you." />
-      <Approach description="My signature methodology fuses diverse disciplines to create deep, lasting change and elevate your performance and impact significantly." />
+      <Approach description="My signature methodology helps high-growth individuals reconnect with their true self, unlock clarity, alignment, and authentic impact from the inside out." />
       <LatestBlog blogs={BLOGS.slice(0, 3)} />
       <Testimonials />
       <Cta variant="secondary" />

@@ -15,7 +15,7 @@ export default function LastestBlog({ blogs }: LatestBlogProps) {
         <div className="w-full flex justify-between items-end">
           <div className="flex flex-col items-start">
             <Animate as="h3" className="title text-brand-primary">
-              Stay Inspired
+              Elevate your thinking
             </Animate>
             <Animate as="h2" staggerIndex={1} className="heading">
               Insights from <br className="md:block hidden" /> Catalyst Codex

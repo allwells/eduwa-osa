@@ -47,7 +47,7 @@ export default function Approach({
               {title ? title : "My Unique Approach"}
             </Animate>
             <Animate as="h2" staggerIndex={1} className="heading">
-              {heading ? <>{heading}</> : "Transform at Every Level"}
+              {heading ? <>{heading}</> : "Transform from the Inside Out"}
             </Animate>
 
             {description && (
@@ -61,20 +61,18 @@ export default function Approach({
             )}
           </div>
 
-          <div className="w-full grid md:grid-cols-12 grid-cols-1 gap-8">
+          <div className="w-full max-w-5xl grid md:grid-cols-2 grid-cols-1 gap-8">
             {TRANSFORMATION.map((item, index) => (
               <Animate
                 key={item.title}
                 staggerIndex={index}
-                className="flex flex-col gap-2 border border-brand-secondary/30 shadow-xl shadow-brand-black/15 bg-brand-white text-brand-black px-6 py-8 rounded lg:col-span-4 md:col-span-6 xl:nth-last-of-type-[2]:col-start-3 xl:last-of-type:col-start-7 lg:nth-last-of-type-[2]:col-start-2 lg:last-of-type:col-start-7 xl:nth-last-of-type-[2]:col-span-4 xl:last-of-type:col-span-4 lg:nth-last-of-type-[2]:col-span-5 lg:last-of-type:col-span-5 md:last-of-type:col-start-4"
+                className="flex flex-col gap-2 border border-brand-secondary/30 shadow-xl shadow-brand-black/15 bg-brand-white text-brand-black px-6 py-8 rounded"
               >
-                <div className="flex items-center justify-center gap-2 mr-auto border border-brand-secondary rounded-xs overflow-hidden pr-2">
-                  <div className="w-7 h-7 flex justify-center items-center shrink-0 bg-brand-secondary text-brand-white font-bold text-sm uppercase">
+                <div className="flex items-center justify-center gap-2 mr-auto border border-brand-secondary rounded-xs overflow-hidden uppercase pl-2">
+                  <h3 className="title text-brand-secondary">Step</h3>
+                  <div className="w-7 h-7 flex justify-center items-center shrink-0 bg-brand-secondary text-brand-white font-bold text-sm">
                     0{index + 1}
                   </div>
-                  <h3 className="title text-brand-secondary">
-                    {item.subtitle}
-                  </h3>
                 </div>
 
                 <h2 className="font-semibold xl:text-3xl text-2xl leading-[1.1] font-crimson">

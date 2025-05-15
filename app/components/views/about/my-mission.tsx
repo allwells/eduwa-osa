@@ -11,24 +11,14 @@ export default function MyMission() {
             animation="fade-left"
             className="flex flex-col gap-6 w-full max-w-xl relative isolate"
           >
-            <h2 className="heading text-brand-secondary">Mission</h2>
-
             <div className="w-full space-y-4 md:text-xl text-lg">
               <p>
-                My mission is to build individuals and institutions that operate
-                from their highest, most authentic state. I am committed to
-                equipping highly driven individuals, teams, and organizations
-                with the tools to operate from a place of clarity, mastery, and
-                wholeness, fostering cultures of innovation, resilience, and
-                peak performance.
-              </p>
-
-              <p className="md:flex hidden">
-                I partner with those who are not satisfied with surface-level
-                change but are ready to redefine the way they think, lead, and
-                operate both personally and organizationally. The goal is always
-                the same: radical transformation, expanded potential, and
-                outcomes that redefine what&apos;s possible.
+                I help individuals and organizations unlock the clarity,
+                mindset, and tools they need to live and lead from their most
+                authentic, powerful selves. I work with highly driven people and
+                forward-moving organizations to elevate their thinking, master
+                who they are, and engineer their next level so they can perform
+                at their highest level and create lasting impact.
               </p>
             </div>
           </Animate>
@@ -44,18 +34,6 @@ export default function MyMission() {
               src="/images/eduwa-2.jpg"
               className="object-top"
             />
-          </Animate>
-
-          <Animate
-            staggerIndex={2}
-            animation="fade-left"
-            className="w-full md:hidden mt-4 space-y-4 text-lg"
-          >
-            I partner with those who are not satisfied with surface-level change
-            but are ready to redefine the way they think, lead, and operate both
-            personally and organizationally. The goal is always the same:
-            radical transformation, expanded potential, and outcomes that
-            redefine what&apos;s possible.
           </Animate>
         </div>
       </div>

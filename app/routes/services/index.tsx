@@ -11,8 +11,6 @@ export default function Services() {
       <ServiceList />
       <Approach
         withBg={false}
-        title="Foundational Approach"
-        heading={<>The Core Transformation Pillars</>}
         className="bg-brand-transparent text-brand-white md:py-24 py-[72px]"
       />
       <Testimonials

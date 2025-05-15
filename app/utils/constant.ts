@@ -2,40 +2,40 @@ import type { Blog, Service, Testimonial, Transformation } from "~/types";
 
 export const SERVICES: Service[] = [
   {
-    id: "Deep Work",
-    subtitle: "8-Week Group",
-    title: "Deep Work",
+    id: "DeepWork",
+    subtitle: "Group Coaching",
+    title: "DeepWork",
     description:
-      "An intensive group journey focused on inner mastery to transcend limitations and unlock exponential results in life and work.",
+      "An 8-week intensive group coaching program to help you launch a more authentic, purposeful and empowered version of yourself.",
     image: "/images/services/deep-work.jpg",
   },
   {
     id: "Launchpad",
-    subtitle: "Power Call",
+    subtitle: "Strategy Call",
     title: "Launchpad",
     description:
       "A high-impact, 2-4 hour deep-dive session for rapid clarity, strategic planning, and immediate action on your next move.",
     image: "/images/services/launchpad.jpg",
   },
   {
-    id: "One-on-One Coaching",
-    subtitle: "12-Week",
-    title: "One-on-One Coaching",
+    id: "One-on-One",
+    subtitle: "One-on-One",
+    title: "12-Week Coaching",
     description:
       "A personalized, long-term journey for deep, lasting transformation into your most aligned, powerful, and empowered self.",
     image: "/images/services/one-on-one.jpg",
   },
   {
     id: "VIP Intensive",
-    subtitle: "VIP",
-    title: "VIP Coaching Intensive",
+    subtitle: "VIP Intensive",
+    title: "VIP Coaching",
     description:
       "A high-touch, private half or full-day experience designed to catalyze rapid breakthroughs, realignment, and strategic execution.",
     image: "/images/services/vip.jpg",
   },
   {
-    id: "Shift Lab",
-    subtitle: "Organizational",
+    id: "Trainings & Workshops",
+    subtitle: "Trainings & Workshops",
     title: "Shift Lab",
     description:
       "A custom workshop and training experience to activate untapped potential, elevate team culture, and engineer sustainable growth for your organization.",
@@ -45,34 +45,24 @@ export const SERVICES: Service[] = [
 
 export const TRANSFORMATION: Transformation[] = [
   {
-    subtitle: "Inner Work",
-    title: "Coaching & Leadership",
+    title: "Excavate",
     description:
-      "Helping individuals and leadership teams dissolve subconscious blocks, rewire mental models, and build an unshakable internal foundation for mastery, success, and innovation.",
+      "We begin by uncovering the hidden patterns, inner conflicts, and mental blocks that are holding you back. This phase is all about truth, seeing yourself clearly and compassionately.",
   },
   {
-    subtitle: "Brain Science",
-    title: "Performance Optimization",
+    title: "Realign",
     description:
-      "Leveraging brain science to optimize performance, decision-making, and behavioral transformation at both personal and organizational levels.",
+      "Once we’ve unearthed what’s beneath the surface, we reconnect you with your core: your values, your voice, your vision. You’ll gain a clear sense of who you are and what really matters.",
   },
   {
-    subtitle: "Inner Alignment",
-    title: "Psycho-Spiritual Mastery",
+    title: "Design",
     description:
-      "Bridging psychology and spirituality to help individuals and organizations access deeper self-awareness, cultivate aligned leadership, and foster a culture of authenticity and excellence.",
+      "With clarity in place, we move into strategy, designing a clear path that aligns with your highest self. Together, we turn big visions into practical steps and grounded decisions.",
   },
   {
-    subtitle: "Foundation",
-    title: "Philosophical Mastery",
+    title: "Express",
     description:
-      "Cultivating a principles-driven approach to leadership, strategy, and sustainable success—ensuring organizations operate with clarity, depth, and long-term vision.",
-  },
-  {
-    subtitle: "Scaling Impact",
-    title: "Organizational Strategy",
-    description:
-      "Designing frameworks for sustainable success and cultural transformation, elevating perspectives, and pioneering a new paradigm of transformational growth.",
+      "This is where it all comes to life. You start showing up, building, and leading from a place of deep authenticity and courage. Your life and work begin to reflect the truest version of you.",
   },
 ];
 
@@ -80,9 +70,9 @@ export const BLOGS: Blog[] = [
   {
     id: "1",
     slug: "deep-work-vs-busywork",
-    title: "Deep Work vs. Busywork: How to Reclaim Focus",
+    title: "DeepWork vs. Busywork: How to Reclaim Focus",
     description:
-      "Learn how Deep Work principles help professionals escape distraction and produce meaningful results.",
+      "Learn how DeepWork principles help professionals escape distraction and produce meaningful results.",
     cover:
       "https://cdn.prod.website-files.com/678ea0cb75408970238a3515/678ea9179f1c9b37102c1a51_2148952921%20(1)-p-500.jpg",
     publishedAt: "2025-04-10T08:30:00Z",
@@ -128,7 +118,7 @@ export const BLOGS: Blog[] = [
   {
     id: "4",
     slug: "designing-your-deep-work-rituals",
-    title: "Designing Your Deep Work Rituals for Maximum Output",
+    title: "Designing Your DeepWork Rituals for Maximum Output",
     description:
       "Create structure around your day to maximize high-focus work with repeatable rituals.",
     cover:

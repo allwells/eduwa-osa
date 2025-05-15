@@ -5,24 +5,22 @@ import Animate from "~/components/common/animate";
 export default function Hero() {
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center items-center md:px-[5%] px-6 max-w-9xl mx-auto md:min-h-[calc(100vh-96px)] min-h-[calc(100vh-80px)] overflow-hidden lg:gap-20 gap-14">
-      <div className="flex flex-col justify-start lg:items-start items-center w-full max-w-xl lg:mt-0 mt-20 lg:text-left text-center gap-4">
+      <div className="flex flex-col justify-start lg:items-start items-center w-full lg:mt-0 mt-20 lg:text-left text-center gap-4">
         <Animate
           as="h1"
-          className="font-crimson font-medium lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1]"
+          className="font-crimson font-medium lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1] max-w-3xl"
         >
-          Unlock Deep
-          <br />
-          <span className="text-brand-secondary">Transformation</span>
-          <br />& Scale Outcomes
+          Unlock Your <span className="text-brand-secondary">Highest Self</span>
+          <br />& Scale Your Outcomes
         </Animate>
 
         <Animate
           as="p"
           staggerIndex={1}
-          className="lg:text-2xl md:text-xl text-lg text-brand-grey-2"
+          className="lg:text-2xl md:text-xl text-lg text-brand-grey-2 max-w-xl"
         >
           Empowering high-growth individuals to unlock their highest potential
-          through high-performance strategies.
+          and engineer their NEXT.
         </Animate>
 
         <Animate staggerIndex={2}>

@@ -75,7 +75,6 @@ export type Service = {
 };
 
 export type Transformation = {
-  subtitle: string;
   title: string;
   description: string;
 };
