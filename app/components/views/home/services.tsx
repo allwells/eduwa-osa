@@ -21,7 +21,7 @@ export default function Services({
     <div
       className={cn(
         "w-full md:px-[5%] px-6 md:py-24 py-12 flex justify-center",
-        className,
+        className
       )}
     >
       <div className="w-full max-w-9xl flex flex-col xl:flex-row justify-between gap-12">

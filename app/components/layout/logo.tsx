@@ -1,4 +1,5 @@
 import cn from "~/utils/cn";
+import CustomImage from "~/components/ui/custom-image";
 
 interface BrandLogoProps {
   className?: string;
@@ -6,13 +7,9 @@ interface BrandLogoProps {
 
 export default function BrandLogo({ className }: BrandLogoProps) {
   return (
-    <img
-      loading="lazy"
-      src="/images/logo.png"
-      className={cn(
-        "object-center object-contain h-auto md:w-16 w-12 saturate-150",
-        className,
-      )}
+    <CustomImage
+      src="logo.png"
+      className={cn("object-contain h-auto md:w-16 w-12", className)}
     />
   );
 }

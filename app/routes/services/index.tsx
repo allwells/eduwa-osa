@@ -13,13 +13,8 @@ export default function Services() {
         withBg={false}
         className="bg-brand-transparent text-brand-white md:py-24 py-[72px]"
       />
-      <Testimonials
-        bgFileName="arc-yellow"
-        title={<></>}
-        heading="Hear From Transformed Clients"
-        className="bg-brand-primary/80 text-brand-black md:py-24 py-[72px]"
-      />
-      <Cta variant="secondary" />
+      <Testimonials title={<></>} heading="Hear From Transformed Clients" />
+      <Cta />
     </div>
   );
 }

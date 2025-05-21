@@ -1,37 +1,34 @@
 import cn from "~/utils/cn";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
 import { LayoutBackground } from "~/routes/layout";
 
-type CtaVariant = "primary" | "secondary";
+type CtaVariant = "default" | "white";
 
 interface CtaProps {
   variant?: CtaVariant;
 }
 
 const VARIANTS: Record<CtaVariant, string> = {
-  primary: "text-brand-primary",
-  secondary: "text-brand-secondary",
+  default: "bg-brand-white text-brand-black",
+  white: "bg-brand-black text-brand-white",
 };
 
-export default function Cta({ variant = "primary" }: CtaProps) {
+export default function Cta({ variant = "default" }: CtaProps) {
   return (
     <div
       className={cn(
         "w-full md:px-[5%] px-6 py-24 flex justify-center items-center",
         {
-          "bg-brand-white border-b border-brand-grey-2": variant === "primary",
-        },
+          "bg-brand-white border-b border-brand-grey-2": variant === "white",
+        }
       )}
     >
       <div
         className={cn(
           "md:w-full w-fit md:max-w-6xl overflow-hidden flex md:flex-row flex-col justify-between items-center gap-16 md:px-12 px-8 pt-12 md:pb-12 pb-0 rounded relative min-h-[512px]",
-          {
-            "bg-brand-black text-brand-white": variant === "primary",
-            "bg-brand-white text-brand-black": variant === "secondary",
-          },
+          VARIANTS[variant]
         )}
       >
         <LayoutBackground />
@@ -43,7 +40,7 @@ export default function Cta({ variant = "primary" }: CtaProps) {
           >
             Are you
             <br />
-            <span className={cn("font-crimson font-medium", VARIANTS[variant])}>
+            <span className="font-crimson font-medium text-brand-primary">
               ready to evolve?
             </span>
           </Animate>
@@ -57,7 +54,7 @@ export default function Cta({ variant = "primary" }: CtaProps) {
           </Animate>
 
           <Animate className="w-fit h-fit">
-            <Button to="/services" variant={variant} className="mt-4">
+            <Button to="/services" className="mt-4">
               Begin your journey
             </Button>
           </Animate>
@@ -65,10 +62,10 @@ export default function Cta({ variant = "primary" }: CtaProps) {
 
         <div className="md:aspect-[380/420] w-full h-full max-w-[320px] max-h-[420px]">
           <Animate className="overflow-hidden w-full h-full max-w-[420px] md:absolute lg:right-0 md:-right-12 bottom-0">
-            <Image
+            <CustomImage
               width={380}
               height={420}
-              src="/images/eduwa.png"
+              src="eduwa-1.webp"
               className="object-contain -scale-x-100 pointer-events-none"
             />
           </Animate>

@@ -11,7 +11,7 @@ const INITIAL_VISIBLE_BLOGS_COUNT = 10;
 export default function Blog() {
   const blogs = BLOGS;
   const [visibleBlogsCount, setVisibleBlogsCount] = useState<number>(
-    INITIAL_VISIBLE_BLOGS_COUNT,
+    INITIAL_VISIBLE_BLOGS_COUNT
   );
 
   const currentlyVisibleBlogs = blogs.slice(0, visibleBlogsCount);
@@ -65,8 +65,11 @@ export default function Blog() {
       </div>
 
       <div className="w-full flex flex-col items-center">
-        <SvgSectionBreaker filename="wavy-white" className="-scale-x-100" />
-        <Cta variant="primary" />
+        <SvgSectionBreaker
+          filename="arc-white"
+          className="-scale-x-100 -mb-1"
+        />
+        <Cta variant="white" />
       </div>
     </div>
   );

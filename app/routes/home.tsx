@@ -16,7 +16,7 @@ export default function Home() {
       <Approach description="My signature methodology helps high-growth individuals reconnect with their true self, unlock clarity, alignment, and authentic impact from the inside out." />
       <LatestBlog blogs={BLOGS.slice(0, 3)} />
       <Testimonials />
-      <Cta variant="secondary" />
+      <Cta />
     </div>
   );
 }

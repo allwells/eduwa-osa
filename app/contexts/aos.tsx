@@ -32,7 +32,8 @@ export const AOSProvider = ({ children, config }: AOSProviderProps) => {
       // Core settings
       offset: 50,
       delay: 0,
-      duration: isMobile ? 800 : 1200, // Shorter duration on mobile
+      duration: 800, // Shorter duration on mobile
+      // duration: isMobile ? 700 : 1000, // Shorter duration on mobile
       easing: "ease-out", // Smoother easing function
       once: true, // Better performance with once: true
       mirror: false,

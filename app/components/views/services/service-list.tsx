@@ -1,5 +1,5 @@
 import cn from "~/utils/cn";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
 import { SERVICES } from "~/utils/constant";
@@ -39,7 +39,9 @@ export default function ServiceList() {
               key={index}
               className={cn(
                 "w-full md:px-[3%] px-6 lg:min-h-[800px] py-14 flex justify-center items-center bg-brand-transparent text-brand-white",
-                isEven ? "bg-brand-secondary/5" : "bg-brand-primary/5",
+                {
+                  "bg-brand-primary/15": isEven,
+                }
               )}
             >
               <div
@@ -47,17 +49,14 @@ export default function ServiceList() {
                   "w-full max-w-9xl flex lg:flex-row flex-col justify-center lg:items-center lg:gap-16 sm:gap-12 gap-8",
                   {
                     "lg:flex-row-reverse": !isEven,
-                  },
+                  }
                 )}
               >
                 <div className="flex flex-col gap-4 w-full lg:max-w-lg max-w-3xl">
                   {/* <Animate
                     as="h3"
                     animation={isEven ? "fade-right" : "fade-left"}
-                    className={cn(
-                      "title text-brand-secondary",
-                      isEven ? "text-brand-secondary" : "text-brand-primary",
-                    )}
+                    className="title text-brand-primary"
                   >
                     {item.title}
                   </Animate> */}
@@ -83,9 +82,9 @@ export default function ServiceList() {
                     className="mt-4"
                   >
                     <Button
-                      to={`/services/${slugifyThis(item.title)}`}
-                      variant={isEven ? "secondary" : "primary"}
+                      variant="primary"
                       className="px-5 py-2.5"
+                      to={`/services/${slugifyThis(item.title)}`}
                     >
                       Learn more
                     </Button>
@@ -95,9 +94,9 @@ export default function ServiceList() {
                 <Animate
                   staggerIndex={index}
                   animation={isEven ? "fade-left" : "fade-right"}
-                  className="w-full h-full max-w-[800px] lg:max-h-[580px] max-h-[500px] aspect-[800/580] overflow-hidden rounded-md"
+                  className="w-full h-full max-w-[800px] lg:max-h-[580px] max-h-[500px] aspect-[800/580] overflow-hidden rounded-md shadow-2xl shadow-brand-black/50"
                 >
-                  <Image width={800} height={580} src={item.image} />
+                  <CustomImage width={800} height={580} src={item.image} />
                 </Animate>
               </div>
             </div>

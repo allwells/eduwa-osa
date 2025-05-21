@@ -1,10 +1,9 @@
 import Animate from "~/components/common/animate";
-import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
 export default function Banner() {
   return (
-    <div className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] flex flex-col justify-center items-center bg-[url('/images/coach.jpg')] bg-top bg-no-repeat bg-cover bg-fixed">
-      <div className="w-full h-full flex flex-col relative justify-center items-center bg-brand-black/75 inset-0 md:px-[5%] px-6 py-24">
+    <div className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] flex flex-col justify-center items-center bg-top bg-no-repeat bg-cover bg-fixed bg-[url('/images/eduwa-4.webp')]">
+      <div className="w-full h-full flex flex-col relative justify-center items-center bg-brand-black/65 inset-0 md:px-[5%] px-6 py-24">
         <Animate
           as="h1"
           animation="zoom-in"
@@ -13,11 +12,6 @@ export default function Banner() {
           Unlock your highest self <br className="sm:block hidden" /> and scale
           your outcomes.
         </Animate>
-
-        {/* <SvgSectionBreaker
-          filename="arc-white"
-          className="-scale-x-100 absolute -bottom-px"
-        /> */}
       </div>
     </div>
   );

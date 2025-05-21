@@ -1,6 +1,6 @@
-import Image from "~/components/ui/image";
 import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
+import CustomImage from "~/components/ui/custom-image";
 
 export default function Hero() {
   return (
@@ -10,7 +10,7 @@ export default function Hero() {
           as="h1"
           className="font-crimson font-medium lg:text-7xl md:text-6xl xs:text-5xl text-[40px] leading-[1] max-w-3xl"
         >
-          Unlock Your <span className="text-brand-secondary">Highest Self</span>
+          Unlock Your <span className="text-brand-primary">Highest Self</span>
           <br />& Scale Your Outcomes
         </Animate>
 
@@ -24,11 +24,7 @@ export default function Hero() {
         </Animate>
 
         <Animate staggerIndex={2}>
-          <Button
-            to="/services"
-            variant="secondary"
-            className="mt-6 px-6 text-base"
-          >
+          <Button to="/services" className="mt-6 px-6 text-base">
             Begin Your Journey
           </Button>
         </Animate>
@@ -39,10 +35,10 @@ export default function Hero() {
         staggerIndex={1}
         className="overflow-hidden lg:min-w-[560px] sm:min-w-[460px] min-h-[530px] aspect-[560/720] w-fit h-fit mt-auto"
       >
-        <Image
+        <CustomImage
           width={560}
           height={720}
-          src="/images/eduwa.png"
+          src="eduwa-1.webp"
           className="object-contain"
         />
       </Animate>

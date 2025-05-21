@@ -29,7 +29,7 @@ export default function Testimonials({
   heading,
   className,
   withBg = true,
-  bgFileName = "arc-yellow",
+  bgFileName = "arc-white",
 }: TestimonialsProps) {
   const [swiper, setSwiper] = useState<SwiperType>();
   const [mounted, setMounted] = useState<boolean>(false);
@@ -53,14 +53,14 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-x-100 opacity-80 -mb-[0.3px]"
+          className="-scale-x-100 -mb-1"
         />
       )}
 
       <div
         className={cn(
-          "w-full md:pb-24 py-12 bg-brand-primary/80 text-brand-black flex justify-center relative isolate overflow-hidden",
-          className,
+          "w-full md:pb-24 py-12 bg-brand-white text-brand-primary flex justify-center relative isolate overflow-hidden",
+          className
         )}
       >
         <div className="w-full flex flex-col md:gap-[72px] gap-12 items-center">
@@ -101,9 +101,7 @@ export default function Testimonials({
                         staggerIndex={index}
                         className="grid h-full w-full"
                       >
-                        <Testimonial
-                          {...{ ...testimonial, filename: bgFileName }}
-                        />
+                        <Testimonial {...testimonial} />
                       </Animate>
                     </SwiperSlide>
                   ))}
@@ -130,7 +128,7 @@ export default function Testimonials({
                     type="button"
                     onClick={() => swiper.slidePrev()}
                     disabled={position.isBeginning}
-                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-grey-1"
+                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-black/40"
                   >
                     <IconArrowLeft className="lg:h-7 lg:w-7 md:h-6 md:w-6 h-5 w-5 shrink-0 stroke-[1.5]" />
                   </button>
@@ -139,7 +137,7 @@ export default function Testimonials({
                     type="button"
                     onClick={() => swiper.slideNext()}
                     disabled={position.isEnd}
-                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-grey-1"
+                    className="w-fit h-fit lg:p-4 md:p-3 p-2 rounded bg-brand-black text-brand-white disabled:text-brand-white/50 disabled:bg-brand-black/40"
                   >
                     <IconArrowRight className="lg:h-7 lg:w-7 md:h-6 md:w-6 h-5 w-5 shrink-0 stroke-[1.5]" />
                   </button>
@@ -162,14 +160,14 @@ export default function Testimonials({
       {withBg && (
         <SvgSectionBreaker
           filename={bgFileName}
-          className="-scale-y-100 opacity-80 -mt-[0.3px]"
+          className="-scale-y-100 -mt-1"
         />
       )}
     </>
   );
 }
 
-function Testimonial(props: { filename?: string } & TestimonialType) {
+function Testimonial(props: TestimonialType) {
   return (
     <div className="w-full h-full flex justify-center items-center relative rounded border border-brand-black/50 bg-brand-black text-brand-white md:p-6 p-4">
       <div className="w-full h-full flex flex-col items-start text-left justify-between gap-y-12">
@@ -179,17 +177,7 @@ function Testimonial(props: { filename?: string } & TestimonialType) {
           )}
 
           <div className="flex flex-col gap-1">
-            <h2
-              className={cn(
-                "text-base font-medium leading-[1.2] tracking-tight uppercase",
-                {
-                  "text-brand-primary":
-                    props.filename && props.filename.endsWith("yellow"),
-                  "text-brand-secondary-muted contrast-100 saturate-200":
-                    props.filename && props.filename.endsWith("red"),
-                },
-              )}
-            >
+            <h2 className="text-base font-medium leading-[1.2] tracking-tight uppercase text-brand-primary-muted contrast-100 saturate-200">
               {props.name}
             </h2>
             <h3 className="font-satoshi-italic text-sm uppercase text-brand-grey-2">

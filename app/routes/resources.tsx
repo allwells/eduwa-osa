@@ -5,7 +5,7 @@ export default function Resources() {
     <div className="w-full flex flex-col">
       <div>Resources</div>
 
-      <Cta variant="secondary" />
+      <Cta variant="white" />
     </div>
   );
 }

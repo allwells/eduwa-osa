@@ -30,8 +30,8 @@ export default function Approach({
 
       <div
         className={cn(
-          "w-full md:px-[5%] px-6 md:pb-24 pb-12 pt-12 flex justify-center bg-brand-secondary/80 text-brand-white relative overflow-hidden isolate",
-          className,
+          "w-full md:px-[5%] px-6 md:pb-24 pb-12 pt-4 flex justify-center bg-brand-primary/80 text-brand-white relative overflow-hidden isolate",
+          className
         )}
       >
         <LogoBackground
@@ -66,11 +66,11 @@ export default function Approach({
               <Animate
                 key={item.title}
                 staggerIndex={index}
-                className="flex flex-col gap-2 border border-brand-secondary/30 shadow-xl shadow-brand-black/15 bg-brand-white text-brand-black px-6 py-8 rounded"
+                className="flex flex-col gap-2 border border-brand-primary/30 shadow-xl shadow-brand-black/15 bg-brand-white text-brand-black px-6 py-8 rounded"
               >
-                <div className="flex items-center justify-center gap-2 mr-auto border border-brand-secondary rounded-xs overflow-hidden uppercase pl-2">
-                  <h3 className="title text-brand-secondary">Step</h3>
-                  <div className="w-7 h-7 flex justify-center items-center shrink-0 bg-brand-secondary text-brand-white font-bold text-sm">
+                <div className="flex items-center justify-center gap-2 mr-auto border border-brand-primary rounded-xs overflow-hidden uppercase pl-2">
+                  <h3 className="title text-brand-primary">Step</h3>
+                  <div className="w-7 h-7 flex justify-center items-center shrink-0 bg-brand-primary text-brand-white font-bold text-sm">
                     0{index + 1}
                   </div>
                 </div>

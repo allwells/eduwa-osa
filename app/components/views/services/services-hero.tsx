@@ -1,4 +1,4 @@
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import Animate from "~/components/common/animate";
 
 export default function ServicesHero() {
@@ -7,7 +7,7 @@ export default function ServicesHero() {
       <div className="w-full md:px-[5%] px-6 md:py-24 py-[72px] flex flex-col gap-12 justify-center items-center overflow-hidden">
         <div className="w-full max-w-9xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:gap-12 gap-8">
           <Animate animation="fade-right" className="space-y-4">
-            <h3 className="title text-brand-primary">Explore Services</h3>
+            {/* <h3 className="title text-brand-primary">Explore Services</h3> */}
             <h2 className="heading">
               Tailored Experiences <br /> for Profound Growth
             </h2>
@@ -29,10 +29,10 @@ export default function ServicesHero() {
           staggerIndex={2}
           className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] rounded-lg flex justify-center items-center"
         >
-          <Image
+          <CustomImage
             width={1024}
             height={600}
-            src="/images/growth.jpg"
+            src="growth.webp"
             className="object-top"
           />
 

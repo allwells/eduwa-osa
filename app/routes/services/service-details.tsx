@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router";
 import { slugifyThis } from "~/utils/helpers";
 import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 import type { Service } from "~/types";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 
 export async function loader({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -15,7 +15,7 @@ export async function loader({ params }: { params: { slug: string } }) {
 
   // Fetch the service details
   const service = SERVICES.find(
-    (service) => slugifyThis(service.title) === slug,
+    (service) => slugifyThis(service.title) === slug
   );
 
   if (!service) {
@@ -38,7 +38,7 @@ export default function ServiceDetails() {
               <h1 className="heading">{service.title}</h1>
             </div>
             <div className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] rounded-lg flex justify-center items-center">
-              <Image width={1024} height={600} src={service.image} />
+              <CustomImage width={1024} height={600} src={service.image} />
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function ServiceDetails() {
           filename="arc-white"
           className="-scale-x-100 -mb-[0.5px]"
         />
-        <Cta variant="primary" />
+        <Cta />
       </div>
     </div>
   );

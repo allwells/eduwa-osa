@@ -7,7 +7,7 @@ export const SERVICES: Service[] = [
     title: "DeepWork",
     description:
       "An 8-week intensive group coaching program to help you launch a more authentic, purposeful and empowered version of yourself.",
-    image: "/images/services/deep-work.jpg",
+    image: "services/deep-work.webp",
   },
   {
     id: "Launchpad",
@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
     title: "Launchpad",
     description:
       "A high-impact, 2-4 hour deep-dive session for rapid clarity, strategic planning, and immediate action on your next move.",
-    image: "/images/services/launchpad.jpg",
+    image: "services/launchpad.webp",
   },
   {
     id: "One-on-One",
@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
     title: "12-Week Coaching",
     description:
       "A personalized, long-term journey for deep, lasting transformation into your most aligned, powerful, and empowered self.",
-    image: "/images/services/one-on-one.jpg",
+    image: "services/one-on-one.webp",
   },
   {
     id: "VIP Intensive",
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
     title: "VIP Coaching",
     description:
       "A high-touch, private half or full-day experience designed to catalyze rapid breakthroughs, realignment, and strategic execution.",
-    image: "/images/services/vip.jpg",
+    image: "services/vip.webp",
   },
   {
     id: "Trainings & Workshops",
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
     title: "Shift Lab",
     description:
       "A custom workshop and training experience to activate untapped potential, elevate team culture, and engineer sustainable growth for your organization.",
-    image: "/images/services/organizational.jpg",
+    image: "services/organizational.webp",
   },
 ];
 

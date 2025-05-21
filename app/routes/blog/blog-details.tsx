@@ -1,6 +1,6 @@
 import type { Blog } from "~/types";
 import Cta from "~/components/views/cta";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import { BLOGS } from "~/utils/constant";
 import { useLoaderData } from "react-router";
 import Badge from "~/components/ui/badge";
@@ -60,7 +60,7 @@ export default function BlogDetails() {
             </div>
 
             <div className="overflow-hidden w-full max-h-[600px] md:aspect-[1024/600] xs:aspect-[512/480] rounded-lg flex justify-center items-center">
-              <Image width={1024} height={600} src={blog.cover} />
+              <CustomImage width={1024} height={600} src={blog.cover} />
             </div>
 
             <div className="w-full blog-content prose">
@@ -136,7 +136,7 @@ export default function BlogDetails() {
           filename="arc-white"
           className="-scale-x-100 -mb-1"
         />
-        <Cta variant="primary" />
+        <Cta variant="white" />
       </div>
     </div>
   );

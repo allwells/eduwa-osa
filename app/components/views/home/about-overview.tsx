@@ -1,6 +1,6 @@
 import Button from "~/components/form/button";
 import Animate from "~/components/common/animate";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import LogoBackground from "~/components/ui/logo-bg";
 import SvgSectionBreaker from "~/components/ui/svg-section-breaker";
 
@@ -17,7 +17,7 @@ export default function AboutOverview() {
             <LogoBackground classNames={{ wrapper: "md:flex hidden" }} />
 
             <div className="flex flex-col gap-2">
-              <Animate as="h3" className="title text-brand-secondary">
+              <Animate as="h3" className="title text-brand-primary">
                 Discover Your Coach
               </Animate>
               <Animate as="h2" staggerIndex={1} className="heading">
@@ -54,11 +54,7 @@ export default function AboutOverview() {
             </Animate>
 
             <Animate staggerIndex={3} className="md:mt-6 mt-4 md:flex hidden">
-              <Button
-                to="/about"
-                variant="secondary"
-                className="px-6 text-base"
-              >
+              <Button to="/about" className="px-6 text-base">
                 Learn more
               </Button>
             </Animate>
@@ -68,10 +64,10 @@ export default function AboutOverview() {
             staggerIndex={4}
             className="overflow-hidden md:max-w-[520px] md:aspect-[520/650] aspect-[400/400] rounded-md flex justify-center md:items-center items-start"
           >
-            <Image
+            <CustomImage
               width={520}
               height={650}
-              src="/images/eduwa-2.jpg"
+              src="eduwa-2.webp"
               className="object-top"
             />
           </Animate>
@@ -96,7 +92,7 @@ export default function AboutOverview() {
           </Animate>
 
           <Animate staggerIndex={6} className="mt-6 md:hidden">
-            <Button to="/about" variant="secondary" className="px-6 text-base">
+            <Button to="/about" className="px-6 text-base">
               Learn more
             </Button>
           </Animate>

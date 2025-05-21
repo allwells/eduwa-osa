@@ -1,6 +1,6 @@
 import type { Blog } from "~/types";
 import { Link } from "react-router";
-import Image from "~/components/ui/image";
+import CustomImage from "~/components/ui/custom-image";
 import Badge from "~/components/ui/badge";
 import { toLongDate } from "~/utils/helpers";
 import { LayoutBackground } from "~/routes/layout";
@@ -11,10 +11,10 @@ export default function BlogCard(blog: Blog) {
       to={`/blog/${blog.slug}`}
       className="w-full h-fit flex justify-center items-center rounded group isolate overflow-hidden relative"
     >
-      <Image
+      <CustomImage
         src={blog.cover}
         alt={blog.title}
-        className="absolute inset-0 scale-none group-hover:scale-110 transition-transform duration-500 -z-[1]"
+        className="absolute inset-0 scale-none group-hover:scale-110 duration-500 -z-[1]"
       />
 
       <div className="w-full h-[460px] aspect-[360/460] bg-brand-black/30 flex flex-col justify-end items-center xl:p-6 lg:p-4 sm:p-6 p-4">

@@ -5,7 +5,6 @@ import {
 } from "@tabler/icons-react";
 import BrandLogo from "./logo";
 import { Link } from "react-router";
-import type { LinkType } from "~/types";
 import { NAVIGATIONS } from "./navbar";
 import type { ReactNode } from "react";
 
@@ -40,7 +39,7 @@ export default function Footer() {
     <footer className="w-full md:px-[5%] px-6 pt-12 pb-8 bg-brand-white text-brand-black flex flex-col items-center">
       <div className="w-full max-w-9xl flex flex-col justify-center items-center">
         <Link to="/" className="w-fit h-fit">
-          <BrandLogo className="md:w-20 w-16 h-auto contrast-200 saturate-0 invert" />
+          <BrandLogo />
         </Link>
 
         <p className="sm:text-base text-sm max-w-x text-brand-grey-1 text-center mt-4">
@@ -55,7 +54,7 @@ export default function Footer() {
             >
               <Link
                 to={item.path}
-                className="w-fit h-fit md:text-sm text-xs font-medium text-brand-grey-1 hover:text-brand-black"
+                className="w-fit h-fit md:text-sm text-xs font-medium text-brand-grey-1 hover:text-brand-primary"
               >
                 {item.name}
               </Link>
@@ -73,7 +72,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               to={social.url}
-              className="text-brand-black hover:scale-110 w-fit h-fit"
+              className="text-brand-primary hover:scale-110 w-fit h-fit"
             >
               {social.icon}
             </Link>
@@ -85,7 +84,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()}{" "}
             <Link
               to="/"
-              className="text-brand-black hover:text-brand-secondary font-medium transition-colors"
+              className="text-brand-black hover:text-brand-primary font-bold transition-colors"
             >
               Eduwa Osa
             </Link>
@@ -94,94 +93,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-// <footer className="w-full md:px-[5%] px-6 bg-brand-white text-brand-black flex flex-col items-center">
-//   {/* Top footer section */}
-//   <div className="w-full max-w-9xl md:pb-20 pt-12 flex flex-col xl:flex-row justify-between items-start gap-x-5 gap-y-10">
-//     <div className="flex flex-col gap-4 shrink-0">
-//       <Link to="/" className="w-fit h-fit">
-//         <BrandLogo className="md:w-20 w-16 h-auto contrast-200 saturate-0 invert" />
-//       </Link>
-
-//       <p className="sm:text-base text-sm max-w-xs text-brand-grey-1">
-//         Unlock Your Highest Self. Scale Your Outcomes.
-//       </p>
-
-//       <div className="flex justify-start items-center gap-x-4 sm:gap-x-6 w-full max-w-fit">
-//         {FOOTER_LINKS.socials.map((social) => (
-//           <Link
-//             target="_blank"
-//             key={social.name}
-//             to={social.url}
-//             className="text-primary hover:text-accent transition-colors duration-300 ease-in-out"
-//           >
-//             <social.icon className="h-auto w-6 shrink-0 stroke-[1.5]" />
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-
-//     <div className="md:flex md:justify-end md:items-start grid grid-cols-1 sm:grid-cols-2 gap-y-8 md:gap-x-12 lg:gap-x-24 w-full md:w-fit">
-//       <Links heading="Quick Links" links={[]} />
-//       <Links heading="Company" links={[]} />
-
-//       <div className="bg-accent col-span-full p-6 md:p-8 lg:p-14 md:max-w-fit w-full flex flex-col justify-center gap-y-4 md:gap-y-6 lg:gap-y-8 rounded-xl">
-//         {/* {[].map((link) => (
-//           <Link
-//             key={link.name}
-//             to={link.path}
-//             className="text-base md:text-lg lg:text-xl text-white font-medium flex justify-start items-center gap-x-3"
-//           >
-//             <span>
-//               <link.icon className="h-auto w-6 lg:w-8 shrink-0 stroke-[1.5]" />{" "}
-//             </span>
-//             <span>{link.name}</span>
-//           </Link>
-//         ))} */}
-//       </div>
-//     </div>
-//   </div>
-
-//   {/* Copyright */}
-//   <div className="w-full max-w-9xl md:border-t md:border-brand-black/15 py-8 flex justify-center md:justify-start items-center">
-//     <p className="text-brand-black/80 sm:text-xs text-[10px] tracking-[1.5px] uppercase">
-//       &copy; {new Date().getFullYear()}{" "}
-//       <Link
-//         to="/"
-//         className="text-brand-black hover:text-brand-secondary font-medium transition-colors"
-//       >
-//         Eduwa Osa
-//       </Link>
-//       . All rights reserved.
-//     </p>
-//   </div>
-// </footer>
-
-interface LinksSectionProps {
-  heading: string;
-  links: LinkType[];
-}
-
-function Links({ heading, links }: LinksSectionProps) {
-  return (
-    <div className="flex flex-col justify-start items-start gap-y-4 shrink-0">
-      <h3 className="text-base font-bold uppercase text-brand-secondary">
-        {heading}
-      </h3>
-
-      <div className="flex flex-col gap-y-2.5">
-        {links.map((link) => (
-          <Link
-            key={link.name}
-            to={link.path}
-            className="text-sm uppercase text-brand-grey-2 hover:text-brand-secondary transition-colors duration-100"
-          >
-            {link.name}
-          </Link>
-        ))}
-      </div>
-    </div>
   );
 }

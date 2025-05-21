@@ -14,10 +14,9 @@ export default function About() {
       <Services title={<></>} heading="My Key Offerings" />
       <Testimonials
         withBg={false}
-        bgFileName="wavy-red"
         title={<></>}
         heading="Hear from my Clients"
-        className="bg-brand-secondary/80 text-brand-white md:py-24 py-[72px]"
+        className="md:py-24 py-[72px] bg-brand-primary/80 text-brand-white"
       />
       <Cta />
     </div>
